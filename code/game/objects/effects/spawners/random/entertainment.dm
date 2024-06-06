@@ -70,9 +70,9 @@
 	spawn_loot_count = 3
 	spawn_loot_split = TRUE
 	loot = list(
-		/obj/item/stack/spacecash/c1 = 5,
-		/obj/item/stack/spacecash/c10 = 3,
-		/obj/item/stack/spacecash/c20 = 2,
+		/obj/item/lethalcash/c1 = 5,
+		/obj/item/lethalcash/c10 = 3,
+		/obj/item/lethalcash/c20 = 2,
 	)
 
 /obj/effect/spawner/random/entertainment/money
@@ -81,11 +81,11 @@
 	spawn_loot_count = 3
 	spawn_loot_split = TRUE
 	loot = list(
-		/obj/item/stack/spacecash/c1 = 10,
-		/obj/item/stack/spacecash/c10 = 5,
-		/obj/item/stack/spacecash/c20 = 3,
-		/obj/item/stack/spacecash/c50 = 2,
-		/obj/item/stack/spacecash/c100 = 1,
+		/obj/item/lethalcash/c1 = 10,
+		/obj/item/lethalcash/c10 = 5,
+		/obj/item/lethalcash/c20 = 3,
+		/obj/item/lethalcash/c50 = 2,
+		/obj/item/lethalcash/c100 = 1,
 	)
 
 /obj/effect/spawner/random/entertainment/money_medium
@@ -105,15 +105,14 @@
 	spawn_loot_count = 5
 	spawn_loot_split = TRUE
 	loot = list(
-		/obj/item/stack/spacecash/c1 = 100,
-		/obj/item/stack/spacecash/c10 = 80,
-		/obj/item/stack/spacecash/c20 = 60,
-		/obj/item/stack/spacecash/c50 = 40,
-		/obj/item/stack/spacecash/c100 = 30,
-		/obj/item/stack/spacecash/c200 = 20,
-		/obj/item/stack/spacecash/c500 = 10,
-		/obj/item/stack/spacecash/c1000 = 5,
-		/obj/item/stack/spacecash/c10000 = 1,
+		/obj/item/lethalcash/c1 = 100,
+		/obj/item/lethalcash/c10 = 80,
+		/obj/item/lethalcash/c20 = 60,
+		/obj/item/lethalcash/c50 = 40,
+		/obj/item/lethalcash/c100 = 30,
+		/obj/item/lethalcash/c200 = 20,
+		/obj/item/lethalcash/c500 = 10,
+		/obj/item/lethalcash/c1000 = 5,
 	)
 
 /obj/effect/spawner/random/entertainment/drugs
