@@ -113,6 +113,7 @@
 		/obj/item/stack/spacecash/c200 = 20,
 		/obj/item/stack/spacecash/c500 = 10,
 		/obj/item/stack/spacecash/c1000 = 5,
+		/obj/item/stack/spacecash/c10000 = 1,
 	)
 
 /obj/effect/spawner/random/entertainment/drugs
