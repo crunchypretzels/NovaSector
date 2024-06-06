@@ -44,7 +44,7 @@
 
 
 /obj/item/lethalcash/bundle
-	name = "bundle of credit slips"
+	name = "bundle of credits"
 	icon_state = ""
 
 /obj/item/lethalcash/bundle/update_icon()
@@ -66,7 +66,7 @@
 	src.desc = "They are worth [value] credits."
 
 
-/obj/item/lethalcash/bundle/attack_self()
+/obj/item/lethalcash/bundle/click_alt(mob/living/user)
 	var/amount = input(usr, "How many credits do you want to take? (0 to [value])", "Take Money", 20) as num
 	amount = round(clamp(amount, 0, value))
 	if(!amount)
@@ -76,15 +76,20 @@
 		to_chat(usr, ("You need to be in arm's reach for that!"))
 		return
 
-	value -= amount
+	src.value -= amount
 	if(!value)
 		qdel(src)
 
-	var/obj/item/lethalcash/bundle/bundle = new (usr.loc)
-	bundle.value = amount
-	bundle.update_icon()
-	usr.put_in_hands(bundle)
-	update_icon()
+	if(amount in list(1000,500,200,100,50,20,10,5,1))
+		var/cashtype = text2path("/obj/item/lethalcash/c[amount]")
+		var/obj/cash = new cashtype (usr.loc)
+		usr.put_in_hands(cash)
+	else
+		var/obj/item/lethalcash/bundle/bundle = new (usr.loc)
+		bundle.value = amount
+		bundle.update_icon()
+		usr.put_in_hands(bundle)
+		update_icon()
 
 
 /obj/item/lethalcash/bundle/Initialize()
@@ -94,19 +99,19 @@
 /obj/item/lethalcash/c1
 	name = "1 credit coin"
 	icon_state = "lethalcash1"
-	desc = "A one credit coin. Even a Yellow could figure this one out."
+	desc = "A one-credit coin. Even a Yellow could figure this one out."
 	value = 1
 
 /obj/item/lethalcash/c5
 	name = "5 credit coin"
 	icon_state = "lethalcash5"
-	desc = "A five credit coin. Arguably the starting point for restaurant tips."
+	desc = "A five-credit coin. Arguably the starting point for restaurant tips."
 	value = 5
 
 /obj/item/lethalcash/c10
 	name = "10 credit coin"
 	icon_state = "lethalcash10"
-	desc = "A ten credit coin. Pleasantly heavy."
+	desc = "A ten-credit coin. Pleasantly heavy."
 	value = 10
 
 /obj/item/lethalcash/c20
@@ -129,14 +134,14 @@
 
 /obj/item/lethalcash/c200
 	name = "200 credit bill"
-	icon_state = "lethalcash1"
+	icon_state = "lethalcash200"
 	desc = "A two-hundred-credit bill, depicting a Marsian sunrise."
 	value = 200
 
 /obj/item/lethalcash/c500
 	name = "500 credit bill"
 	icon_state = "lethalcash500"
-	desc = "A bill worth five thousand credits. More of these come and go from the Spinward Territories than people."
+	desc = "A five-hundred-credit bill. More of these come and go from the Spinward Territories than people."
 	value = 500
 
 /obj/item/lethalcash/c1000
@@ -146,7 +151,7 @@
 	value = 1000
 
 
-/proc/spawn_lethal_money(sum, spawnloc, mob/living/carbon/human/H)
+/proc/spawn_lethal_money(sum, spawnloc, mob/living/carbon/human/H) //there's a little weirdness with the way it generates single bills but this works pretty good
 	var/obj/item/lethalcash/bundle/bundle = new(spawnloc)
 	bundle.value = sum
 	bundle.update_icon()

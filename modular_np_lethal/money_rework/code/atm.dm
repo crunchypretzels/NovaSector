@@ -81,9 +81,21 @@
 			var/dosh_taken = text2num(params["totalcreds"])
 			if(dosh_taken <= balance)
 				synced_bank_account.adjust_money(-dosh_taken)
-				say("Withdrawal in process. Please await short-range currency translation.")
+				say("Withdrawal complete! Have a great day!")
 				spawn_lethal_money(dosh_taken, drop_location())
+				playsound(src, 'sound/effects/cashregister.ogg', 50, TRUE)
 			else
 				say("Unable to complete transaction.")
 			. = TRUE
+
+/obj/item/flatpacked_machine/atm
+	name = "banking terminal parts kit"
+	icon = 'modular_np_lethal/money_rework/icons/atm.dmi'
+	icon_state = "recycler"
+	type_to_deploy = /obj/machinery/autobank
+	deploy_time = 2 SECONDS
+	custom_materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 5,
+		/datum/material/glass = SHEET_MATERIAL_AMOUNT * 5,
+	)
 
