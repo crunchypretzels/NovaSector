@@ -4,7 +4,7 @@
 
 /obj/machinery/autobank
 	name = "banking terminal"
-	desc = "An automatic teller machine, or ATM. What bank is this connected to? Who knows? It takes your money and- usually- gives it back."
+	desc = "An automatic teller machine, or ATM. What bank is this connected to? Who knows? It takes your money and(usually) gives it back."
 	icon = 'modular_np_lethal/money_rework/icons/atm.dmi'
 	icon_state = "atm"
 	anchored = TRUE
@@ -91,7 +91,7 @@
 /obj/item/flatpacked_machine/atm
 	name = "banking terminal parts kit"
 	icon = 'modular_np_lethal/money_rework/icons/atm.dmi'
-	icon_state = "recycler"
+	icon_state = "flatpacked_atm"
 	type_to_deploy = /obj/machinery/autobank
 	deploy_time = 2 SECONDS
 	custom_materials = list(
