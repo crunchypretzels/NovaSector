@@ -1,3 +1,6 @@
+/* LETHAL EDIT: disables holopay
+	i really hate this thing
+
 /obj/structure/holopay
 	name = "holographic pay stand"
 	desc = "an unregistered pay stand"
@@ -296,3 +299,5 @@
 	log_econ("[amount] credits were transferred from [payee]'s transaction to [linked_card.registered_account.account_holder]")
 	SSblackbox.record_feedback("amount", "credits_transferred", amount)
 	return TRUE
+*/
+// may we never need you again

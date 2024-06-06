@@ -54,7 +54,7 @@
 	if(value)
 		if(synced_bank_account)
 			synced_bank_account.adjust_money(value)
-			say("Credits deposited! The [synced_bank_account.account_holder] is now [synced_bank_account.account_balance] cr.")
+			say("Credits deposited! Your account now holds [synced_bank_account.account_balance] credits.")
 		qdel(weapon)
 		return
 	return ..()
