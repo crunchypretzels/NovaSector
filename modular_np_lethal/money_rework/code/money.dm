@@ -60,7 +60,6 @@
 			var/image/banknote = image('modular_np_lethal/money_rework/icons/lethalmoney.dmi', "lethalcash[i]")
 			var/matrix/M = matrix()
 			M.Translate(rand(-6, 6), rand(-4, 8))
-			M.Turn(pick(-45, -27.5, 0, 0, 0, 0, 0, 0, 0, 27.5, 45))
 			banknote.transform = M
 			src.add_overlay(banknote)
 	src.desc = "They are worth [value] credits."
@@ -73,12 +72,9 @@
 		to_chat(usr, span_warning("You need to be in arm's reach for that!"))
 		return
 
-	src.value -= amount
-	src.update_icon()
 	if(!value)
-		usr.putItemFromInventoryInHandIfPossible(src)
 		qdel(src)
-	if(value in list(1000,500,200,100,50,20,10,5,1))
+	if(amount in list(1000,500,200,100,50,20,10,5,1))
 		var/cashtype = text2path("/obj/item/lethalcash/c[amount]")
 		var/obj/cash = new cashtype (usr.loc)
 		usr.put_in_hands(cash)
@@ -87,6 +83,11 @@
 		bundle.value = amount
 		bundle.update_icon()
 		usr.put_in_hands(bundle)
+
+	src.value -= amount
+	src.update_icon()
+	if(!value)
+		qdel(src)
 
 /obj/item/lethalcash/bundle/Initialize()
 	. = ..()
