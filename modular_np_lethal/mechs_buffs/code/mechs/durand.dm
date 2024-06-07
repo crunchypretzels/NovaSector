@@ -51,10 +51,6 @@
 	icon_state = "mauler"
 	max_integrity = 3500
 	base_icon_state = "mauler"
-	movedelay = 5.5
-	internal_damage_threshold = 40
-	internal_damage_probability = 10
-	max_integrity = 3500
 	armor_type = /datum/armor/mecha_mauler
 	wreckage = /obj/structure/mecha_wreckage/mauler
 	mecha_flags = ID_LOCK_ON | CAN_STRAFE | IS_ENCLOSED | HAS_LIGHTS | MMI_COMPATIBLE
