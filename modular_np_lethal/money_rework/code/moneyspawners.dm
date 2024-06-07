@@ -52,10 +52,10 @@
 		/obj/item/lethalcash/c1000 = 5,
 	)
 
-/obj/item/storage/briefcase/secure/syndie/lethal //one of those things people may like to have
+/obj/item/storage/briefcase/secure/lethalsyndie //one of those things people may like to have
 	force = 15
 
-/obj/item/storage/briefcase/secure/syndie/lethal/PopulateContents()
+/obj/item/storage/briefcase/secure/lethalsyndie/PopulateContents()
 	. = ..()
 	for(var/iterator in 1 to 5)
 		new /obj/item/lethalcash/c1000(src)

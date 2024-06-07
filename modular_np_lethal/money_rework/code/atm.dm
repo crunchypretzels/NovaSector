@@ -17,9 +17,19 @@
 	// amount of credits withdrawn
 	var/withdrawn_credits = 0
 
-/obj/machinery/computer/bank_machine/Initialize(mapload)
+/obj/machinery/autobank/Initialize(mapload)
 	. = ..()
 	synced_bank_account = null
+
+/obj/structure/machinery/autobank/examine(mob/user)
+	. = ..()
+
+	. += span_engradio("You could <b>examine closer</b> for more information about banking services...")
+
+/obj/structure/machinery/autobank/examine_more(mob/user)
+	. = ..()
+
+	. += span_notice("You could turn <b>coins</b, <b>holochips</b>, and <b>space cash<b> into standardized credits.")
 
 /obj/machinery/autobank/attackby(obj/item/weapon, mob/user, params)
 	var/value = 0
@@ -29,6 +39,9 @@
 	else if(istype(weapon, /obj/item/holochip))
 		var/obj/item/holochip/inserted_holochip = weapon
 		value = inserted_holochip.credits
+	else if(istype(weapon, /obj/item/stack/spacecash))
+		var/obj/item/stack/spacecash/inserted_cash = weapon
+		value = inserted_cash.value * inserted_cash.amount
 	else if(istype(weapon, /obj/item/coin))
 		var/obj/item/coin/inserted_coin = weapon
 		value = inserted_coin.value
@@ -36,6 +49,7 @@
 		if(synced_bank_account)
 			synced_bank_account.adjust_money(value)
 			say("Credits deposited! Your account now holds [synced_bank_account.account_balance] credits.")
+			playsound(src, 'sound/effects/cashregister.ogg', 50, TRUE)
 		qdel(weapon)
 		return
 	return ..()
@@ -89,6 +103,7 @@
 				playsound(src, 'sound/effects/cashregister.ogg', 50, TRUE)
 			else
 				say("Unable to complete transaction.")
+				playsound(src, 'sound/machines/uplinkerror.ogg', 50, TRUE)
 			. = TRUE
 
 //colony fab version
