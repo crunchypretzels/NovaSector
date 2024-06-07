@@ -69,7 +69,7 @@
 	amount = round(clamp(amount, 0, src.value))
 	if(amount==0) return 0
 	else if(!Adjacent(usr))
-		to_chat(usr, span_warning("You need to be in arm's reach for that!"))
+		to_chat(usr, span_warning("You can't reach the bundle!"))
 		return
 
 	if(!value)
