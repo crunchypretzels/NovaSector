@@ -21,7 +21,7 @@
 	. = ..()
 	synced_bank_account = null
 
-/obj/structure/machinery/autobank/examine(mob/user)
+/obj/machinery/autobank/examine(mob/user)
 	. = ..()
 
 	. += span_engradio("You could <b>examine closer</b> for more information about banking services...")
