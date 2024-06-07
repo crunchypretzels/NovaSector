@@ -23,7 +23,8 @@
 				if(length(line))
 					to_chat(usr, span_notice("[jointext(line, "\n")]"))
 			if("open_examine_panel")
-				mob_examine_panel.ui_interact(usr) //datum has a examine_panel component, here we open the window
+				tgui.holder = src
+				tgui.ui_interact(usr) //datum has a tgui component, here we open the window
 
 /mob/living/carbon/human/species/vox
 	race = /datum/species/vox

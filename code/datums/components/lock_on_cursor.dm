@@ -97,6 +97,7 @@
 		return
 	for(var/image/overlay as anything in lock_images)
 		owner.client.images -= overlay
+		qdel(overlay)
 	lock_images.Cut()
 
 /// Reset the overlays on all targets

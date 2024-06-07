@@ -147,8 +147,3 @@
 
 ///Fluff. The name of the aquarium company shown in the fish catalog
 #define AQUARIUM_COMPANY "Aquatech Ltd."
-
-/// how long between electrogenesis zaps
-#define ELECTROGENESIS_DURATION 40 SECONDS
-/// a random range the electrogenesis cooldown varies by
-#define ELECTROGENESIS_VARIANCE (rand(-10 SECONDS, 10 SECONDS))

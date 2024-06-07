@@ -656,7 +656,8 @@
 	..()
 	var/obj/item/lightreplacer/light_replacer = locate(/obj/item/lightreplacer) in basic_modules
 	if(light_replacer)
-		light_replacer.Charge(cyborg, coeff)
+		for(var/charge in 1 to coeff)
+			light_replacer.Charge(cyborg)
 
 	var/obj/item/reagent_containers/spray/cyborg_drying/drying_agent = locate(/obj/item/reagent_containers/spray/cyborg_drying) in basic_modules
 	if(drying_agent)

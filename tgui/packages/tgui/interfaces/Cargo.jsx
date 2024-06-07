@@ -490,7 +490,7 @@ const CargoCart = (props) => {
           ))}
         </Table>
       )}
-      {cart.length > 0 && !!can_send && (
+      {cart.length > 0 && !requestonly && (
         <Box mt={2}>
           {(away === 1 && docked === 1 && (
             <Button

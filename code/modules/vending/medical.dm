@@ -17,7 +17,6 @@
 		/obj/item/stack/medical/ointment = 2,
 		/obj/item/stack/medical/suture = 2,
 		/obj/item/stack/medical/bone_gel = 4,
-		/obj/item/cane/crutch = 2,
 		/obj/item/cane/white = 2,
 		/obj/item/clothing/glasses/eyepatch/medical = 2,
 		/obj/item/storage/box/bandages = 2,
@@ -63,7 +62,6 @@
 		/obj/item/stack/medical/ointment = 0,
 		/obj/item/stack/medical/suture = 1,
 		/obj/item/stack/medical/bone_gel = 1,
-		/obj/item/cane/crutch = 2,
 		/obj/item/cane/white = 2,
 		/obj/item/clothing/glasses/eyepatch/medical = 2,
 	)

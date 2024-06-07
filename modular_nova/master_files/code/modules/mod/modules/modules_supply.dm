@@ -40,13 +40,7 @@
 
 /// Checks if the suit's current state is valid for buff-granting purposes. Should only be called when the MOD is deployed or retracted.
 /obj/item/mod/module/ash_accretion/proc/on_mod_toggle()
-	var/fully_deployed = TRUE
-	for(var/obj/item/part as anything in mod.get_parts())
-		if(part.loc == mod)
-			fully_deployed = FALSE
-			break
-
-	if(fully_deployed && mod.active)
+	if((mod.wearer.head == mod.helmet) && (mod.wearer.wear_suit == mod.chestplate) && (mod.wearer.gloves == mod.gauntlets) && (mod.wearer.shoes == mod.boots) && mod.active)
 		// suit is on and fully deployed, give them their proofing
 		mod.wearer.add_traits(list(TRAIT_ASHSTORM_IMMUNE, TRAIT_SNOWSTORM_IMMUNE), MOD_TRAIT)
 		RegisterSignal(mod.wearer, COMSIG_MOVABLE_MOVED, PROC_REF(on_move))
@@ -65,8 +59,9 @@
 	if(!traveled_tiles)
 		return
 
+	var/list/parts = mod.mod_parts + mod
 	var/datum/armor/to_remove = get_armor_by_type(armor_mod)
-	for(var/obj/item/part as anything in mod.get_parts(all = TRUE))
+	for(var/obj/item/part as anything in parts)
 		part.set_armor(part.get_armor().subtract_other_armor(to_remove.generate_new_with_multipliers(list(ARMOR_ALL = traveled_tiles))))
 
 	if(traveled_tiles == max_traveled_tiles)
