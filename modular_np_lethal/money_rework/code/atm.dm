@@ -26,7 +26,7 @@
 
 	. += span_engradio("You could <b>examine closer</b> for more information about banking services...")
 
-/obj/structure/machinery/autobank/examine_more(mob/user)
+/obj/machinery/autobank/examine_more(mob/user)
 	. = ..()
 
 	. += span_notice("You could turn <b>coins</b, <b>holochips</b>, and <b>space cash<b> into standardized credits.")
@@ -50,7 +50,10 @@
 			synced_bank_account.adjust_money(value)
 			say("Credits deposited! Your account now holds [synced_bank_account.account_balance] credits.")
 			playsound(src, 'sound/effects/cashregister.ogg', 50, TRUE)
-		qdel(weapon)
+			qdel(weapon)
+		else
+			say("No account loaded! Please present an identification string.")
+			playsound(src, 'sound/machines/uplinkerror.ogg', 50, TRUE)
 		return
 	return ..()
 
