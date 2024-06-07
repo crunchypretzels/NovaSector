@@ -29,7 +29,7 @@
 /obj/machinery/autobank/examine_more(mob/user)
 	. = ..()
 
-	. += span_notice("You could turn <b>coins</b, <b>holochips</b>, and <b>space cash<b> into standardized credits.")
+	. += span_notice("You could turn <b>coins</b>, vending machine <b>holochips</b>, and <b>space cash<b> into standardized credits.")
 
 /obj/machinery/autobank/attackby(obj/item/weapon, mob/user, params)
 	var/value = 0
