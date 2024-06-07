@@ -24,11 +24,14 @@
 /obj/machinery/autobank/attackby(obj/item/weapon, mob/user, params)
 	var/value = 0
 	if(istype(weapon, /obj/item/lethalcash))
-		var/obj/item/lethalcash/insertedcash = weapon
-		value = insertedcash.value
+		var/obj/item/lethalcash/inserted_cash = weapon
+		value = inserted_cash.value
 	else if(istype(weapon, /obj/item/holochip))
 		var/obj/item/holochip/inserted_holochip = weapon
 		value = inserted_holochip.credits
+	else if(istype(weapon, /obj/item/coin))
+		var/obj/item/coin/inserted_coin = weapon
+		value = inserted_coin.value
 	if(value)
 		if(synced_bank_account)
 			synced_bank_account.adjust_money(value)
@@ -88,6 +91,7 @@
 				say("Unable to complete transaction.")
 			. = TRUE
 
+//colony fab version
 /obj/item/flatpacked_machine/atm
 	name = "banking terminal parts kit"
 	icon = 'modular_np_lethal/money_rework/icons/atm.dmi'

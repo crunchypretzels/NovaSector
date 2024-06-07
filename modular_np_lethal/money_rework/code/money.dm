@@ -65,22 +65,20 @@
 			src.add_overlay(banknote)
 	src.desc = "They are worth [value] credits."
 
-
-/obj/item/lethalcash/bundle/click_alt(mob/living/user)
-	var/amount = input(usr, "How many credits do you want to take? (0 to [value])", "Take Money", 20) as num
-	amount = round(clamp(amount, 0, value))
-	if(!amount)
-		return
-
+/obj/item/lethalcash/bundle/attack_self()
+	var/amount = input(usr, "How many credits do you want to take? (0 to [src.value])", "Take Money", 20) as num
+	amount = round(clamp(amount, 0, src.value))
+	if(amount==0) return 0
 	else if(!Adjacent(usr))
-		to_chat(usr, ("You need to be in arm's reach for that!"))
+		to_chat(usr, span_warning("You need to be in arm's reach for that!"))
 		return
 
 	src.value -= amount
+	src.update_icon()
 	if(!value)
+		usr.putItemFromInventoryInHandIfPossible(src)
 		qdel(src)
-
-	if(amount in list(1000,500,200,100,50,20,10,5,1))
+	if(value in list(1000,500,200,100,50,20,10,5,1))
 		var/cashtype = text2path("/obj/item/lethalcash/c[amount]")
 		var/obj/cash = new cashtype (usr.loc)
 		usr.put_in_hands(cash)
@@ -89,8 +87,6 @@
 		bundle.value = amount
 		bundle.update_icon()
 		usr.put_in_hands(bundle)
-		update_icon()
-
 
 /obj/item/lethalcash/bundle/Initialize()
 	. = ..()

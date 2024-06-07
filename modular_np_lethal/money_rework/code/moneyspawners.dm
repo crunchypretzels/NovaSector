@@ -51,3 +51,11 @@
 		/obj/item/lethalcash/c500 = 10,
 		/obj/item/lethalcash/c1000 = 5,
 	)
+
+/obj/item/storage/briefcase/secure/syndie/lethal //one of those things people may like to have
+	force = 15
+
+/obj/item/storage/briefcase/secure/syndie/lethal/PopulateContents()
+	. = ..()
+	for(var/iterator in 1 to 5)
+		new /obj/item/lethalcash/c1000(src)
