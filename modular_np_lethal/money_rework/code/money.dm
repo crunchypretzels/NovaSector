@@ -149,8 +149,14 @@
 
 
 /proc/spawn_lethal_money(sum, spawnloc, mob/living/carbon/human/H) //there's a little weirdness with the way it generates single bills but this works pretty good
-	var/obj/item/lethalcash/bundle/bundle = new(spawnloc)
-	bundle.value = sum
-	bundle.update_icon()
-	if(istype(H) && !H.get_active_hand())
-		H.put_in_hands(bundle)
+	if(sum in list(1000,500,200,100,50,20,10,5,1))
+		var/cashtype = text2path("/obj/item/lethalcash/c[sum]")
+		var/obj/cash = new cashtype (spawnloc)
+		usr.put_in_hands(cash)
+	else
+		var/obj/item/lethalcash/bundle/fundle = new (spawnloc)
+		fundle.value = sum
+		fundle.update_icon()
+		usr.put_in_hands(fundle)
+		if(istype(H) && !H.get_active_hand())
+			H.put_in_hands(fundle)
