@@ -1,9 +1,6 @@
-import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
 import {
   AnimatedNumber,
-  Button,
   LabeledList,
   NoticeBox,
   NumberInput,
@@ -31,19 +28,17 @@ export const AutoBank = (props) => {
             <LabeledList.Item
               label="CURRENT BALANCE"
               buttons={
-                <>
-                  <NumberInput
-                    value={0}
-                    minValue={0}
-                    maxValue={100000}
-                    step={1}
-                    onChange={(value) =>
-                      act('withdraw', {
-                        totalcreds: value,
-                      })
-                    }
-                  />
-                </>
+                <NumberInput
+                  value={0}
+                  minValue={0}
+                  maxValue={100000}
+                  step={1}
+                  onChange={(value) =>
+                    act('withdraw', {
+                      totalcreds: value,
+                    })
+                  }
+                />
               }
             >
               <AnimatedNumber
