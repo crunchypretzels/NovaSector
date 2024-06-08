@@ -296,4 +296,3 @@
 	log_econ("[amount] credits were transferred from [payee]'s transaction to [linked_card.registered_account.account_holder]")
 	SSblackbox.record_feedback("amount", "credits_transferred", amount)
 	return TRUE
-
