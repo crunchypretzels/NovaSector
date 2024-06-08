@@ -791,8 +791,8 @@
 			var/datum/bank_account/D = SSeconomy.get_dep_account(registered_account.account_job.paycheck_department)
 			if(D)
 				. += "The [D.account_holder] reports a balance of [D.account_balance] cr."
-		//. += span_info("Alt-Click the ID to pull money from the linked account in the form of holochips.")
-		//. += span_info("You can insert credits into the linked account by pressing holochips, cash, or coins against the ID.")
+		//. += span_info("Alt-Click the ID to pull money from the linked account in the form of holochips.") // LETHAL EDIT REMOVAL
+		//. += span_info("You can insert credits into the linked account by pressing holochips, cash, or coins against the ID.") // LETHAL EDIT REMOVAL
 		if(registered_account.replaceable)
 			. += span_info("Alt-Right-Click the ID to change the linked bank account.")
 		if(registered_account.civilian_bounty)
