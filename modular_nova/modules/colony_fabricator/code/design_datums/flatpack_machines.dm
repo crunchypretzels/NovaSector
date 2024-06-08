@@ -23,7 +23,6 @@
 		"flatpack_rtg",
 		"flatpack_thermo",
 		"flatpack_ore_silo",
-		"flatpack_atm",
 		"flatpack_turbine_team_fortress_two",
 		"flatpack_bootleg_teg",
 	)
@@ -223,25 +222,6 @@
 		FABRICATOR_CATEGORY_FLATPACK_MACHINES + FABRICATOR_SUBCATEGORY_MATERIALS,
 	)
 	construction_time = 1 MINUTES
-
-// an atm; store and retrieve money from your id card account
-
-/datum/design/flatpack_atm
-	name = "Flat-Packed Banking Terminal"
-	desc = "A convenient way to store necessary currency through a peer-to-peer trans-spatial \
-		banking network. Low-risk, but no-reward."
-	id = "flatpack_atm"
-	build_type = COLONY_FABRICATOR
-	materials = list(
-		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 5,
-		/datum/material/glass = SHEET_MATERIAL_AMOUNT * 5,
-	)
-	build_path = /obj/item/flatpacked_machine/atm
-	category = list(
-		RND_CATEGORY_INITIAL,
-		FABRICATOR_CATEGORY_FLATPACK_MACHINES + FABRICATOR_SUBCATEGORY_MATERIALS,
-	)
-	construction_time = 30 SECONDS
 
 // Wind turbine, produces tiny amounts of power when placed outdoors in an atmosphere, but makes significantly more if there's a storm in that area
 

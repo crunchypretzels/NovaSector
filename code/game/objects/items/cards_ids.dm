@@ -142,7 +142,7 @@
 /obj/item/card/id/Destroy()
 	if (registered_account)
 		registered_account.bank_cards -= src
-//	if (my_store)
+//	if (my_store) // LETHAL EDIT REMOVAL
 //		QDEL_NULL(my_store)
 	return ..()
 
@@ -433,24 +433,24 @@
 		return
 	if(!proximity_flag || !check_allowed_items(target) || !isfloorturf(target))
 		return
-	//try_project_paystand(user, target)
+	//try_project_paystand(user, target) // LETHAL EDIT REMOVAL
 
 /obj/item/card/id/attack_self_secondary(mob/user, modifiers)
 	. = ..()
 	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
 		return
-	//try_project_paystand(user)
+	//try_project_paystand(user) // LETHAL EDIT REMOVAL
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/item/card/id/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	. = ..()
 
 	context[SCREENTIP_CONTEXT_LMB] = "Show ID"
-	//context[SCREENTIP_CONTEXT_RMB] = "Project pay stand"
+	//context[SCREENTIP_CONTEXT_RMB] = "Project pay stand" // LETHAL EDIT REMOVAL
 	if(isnull(registered_account) || registered_account.replaceable) //Same check we use when we check if we can assign an account
 		context[SCREENTIP_CONTEXT_ALT_RMB] = "Assign account"
-	//else if(registered_account.account_balance > 0)
-	//	context[SCREENTIP_CONTEXT_ALT_LMB] = "Withdraw credits"
+	//else if(registered_account.account_balance > 0) // LETHAL EDIT REMOVAL
+	//	context[SCREENTIP_CONTEXT_ALT_LMB] = "Withdraw credits" // LETHAL EDIT REMOVAL
 	return CONTEXTUAL_SCREENTIP_SET
 /* LETHAL EDIT - REMOVE HOLOPAY STAND
 /obj/item/card/id/proc/try_project_paystand(mob/user, turf/target)
@@ -678,7 +678,7 @@
 	if(!alt_click_can_use_id(user))
 		return NONE
 	if(registered_account.account_debt)
-		var/choice = tgui_alert(user, "Choose An Action", "Bank Account", list("Pay Debt"))
+		var/choice = tgui_alert(user, "Choose An Action", "Bank Account", list("Pay Debt")) // LETHALSTATION EDIT CHANGE - ORIGINAL - var/choice = tgui_alert(user, "Choose An Action", "Bank Account", list("Withdraw", "Pay Debt"))
 		if(!choice || QDELETED(user) || QDELETED(src) || !alt_click_can_use_id(user) || loc != user)
 			return CLICK_ACTION_BLOCKING
 		if(choice == "Pay Debt")
