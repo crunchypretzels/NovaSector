@@ -22,3 +22,21 @@
 	item_path = /obj/item/clothing/head/helmet/lethal_filtre_helmet/nineball
 	ckeywhitelist = list("DawsonKeyes")
 	restricted_roles = list("Filtre")
+
+/datum/loadout_item/head/manchurian_armor
+	name = "'Whispersmith' type IV ballistic helmet"
+	item_path = /obj/item/clothing/head/helmet/lethal_filtre_helmet/realpolitik
+	ckeywhitelist = list("Waff-AI")
+	restricted_roles = list("Filtre")
+
+/datum/loadout_item/head/nukie_armor
+	name = "'Kakuheiki' type IV ballistic helmet"
+	item_path = /obj/item/clothing/head/helmet/lethal_filtre_helmet/kakuheiki
+	ckeywhitelist = list("SindyKate")
+	restricted_roles = list("Filtre")
+
+/datum/loadout_item/head/headswoman_armor
+	name = "'Judeti' type IV ballistic helmet'"
+	item_path = /obj/item/clothing/head/helmet/lethal_filtre_helmet/headswoman
+	ckeywhitelist = list("DawsonKeyes")
+	restricted_roles = list("Filtre")
