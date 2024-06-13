@@ -38,5 +38,5 @@
 /datum/loadout_item/head/headswoman_armor
 	name = "'Judeti' type IV ballistic helmet'"
 	item_path = /obj/item/clothing/head/helmet/lethal_filtre_helmet/headswoman
-	ckeywhitelist = list("DawsonKeyes")
+	ckeywhitelist = list("ChillyLobster")
 	restricted_roles = list("Filtre")
