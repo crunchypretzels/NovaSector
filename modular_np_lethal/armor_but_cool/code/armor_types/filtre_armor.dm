@@ -258,3 +258,17 @@
 		second-most important part of a marine's body. Green Company markings compliment the full-coverage \
 		HUD that replaces the typical visor, and there appears to be a hole created to reveal the right eye."
 	icon_state = "filtre_helmet_headswoman"
+
+/obj/item/clothing/suit/armor/lethal_filtre/bloodhound
+	name = "'Bloodhound' type III armor kit"
+	desc = "A heavy full kit of armor for protecting every part of your body but the head and legs with exceptional plating. \
+		The armor's excessive bulk, however, makes the kit slow to move in. A small price to pay for such superior protection. \
+		This model comes equipped with a specialized sensor suite and radio antenna."
+	icon_state = "filtre_light_scout"
+
+/obj/item/clothing/head/helmet/lethal_filtre_helmet/light/bloodhound
+	name = "'Bloodhound' type III ballistic helmet"
+	desc = "A high tech helmet with a complicated-looking sensors suite stuck to the front. \
+		While not as protective as other types of helmets, the sensors suite has a variety of \
+		modern HUDs useful for all types of operations. This one has a fully-enclosed faceplate!"
+	icon_state = "filtre_helmet_scout"

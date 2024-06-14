@@ -12,15 +12,21 @@
 
 // Custom filtre helmets
 /datum/loadout_item/head/giggler_armor
-	name = "'Armageddon' type V ballistic helmet"
+	name = "'Armageddon' type IV ballistic helmet"
 	item_path = /obj/item/clothing/head/helmet/lethal_filtre_helmet/giggler
 	ckeywhitelist = list("ApplePlastic")
 	restricted_roles = list("Filtre")
 
 /datum/loadout_item/head/nineball_armor
-	name = "'Novem' type V ballistic helmet"
+	name = "'Novem' type IV ballistic helmet"
 	item_path = /obj/item/clothing/head/helmet/lethal_filtre_helmet/nineball
 	ckeywhitelist = list("DawsonKeyes")
+	restricted_roles = list("Filtre")
+
+/datum/loadout_item/head/bloodhound_armor
+	name = "'Blooodhound' type IV ballistic helmet"
+	item_path = /obj/item/clothing/head/helmet/lethal_filtre_helmet/bloodhound
+	ckeywhitelist = list("Valx001")
 	restricted_roles = list("Filtre")
 
 /datum/loadout_item/head/manchurian_armor
