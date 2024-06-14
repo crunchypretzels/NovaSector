@@ -25,7 +25,7 @@
 
 /datum/loadout_item/head/bloodhound_armor
 	name = "'Bloodhound' type IV ballistic helmet"
-	item_path = /obj/item/clothing/head/helmet/lethal_filtre_helmet/bloodhound
+	item_path = /obj/item/clothing/head/helmet/lethal_filtre_helmet/light/bloodhound
 	ckeywhitelist = list("Valx001")
 	restricted_roles = list("Filtre")
 
