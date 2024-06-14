@@ -94,7 +94,7 @@
 	icon_state = "filtre_meowers"
 	armor_type = /datum/armor/armor_lethal_filtre_light
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	slowdown = 0.25
+	slowdown = 0.4
 	max_integrity = 1000
 	limb_integrity = 700
 
