@@ -29,7 +29,7 @@
 
 /datum/loadout_item/head/bloodhound_armor
 	name = "'Bloodhound' type III armor kit"
-	item_path = /obj/item/clothing/suit/armor/lethal_filtre/bloodhound
+	item_path = /obj/item/clothing/suit/armor/lethal_filtre/light/bloodhound
 	ckeywhitelist = list("Valx001")
 	restricted_roles = list("Filtre")
 
