@@ -24,7 +24,7 @@
 	restricted_roles = list("Filtre")
 
 /datum/loadout_item/head/bloodhound_armor
-	name = "'Blooodhound' type IV ballistic helmet"
+	name = "'Bloodhound' type IV ballistic helmet"
 	item_path = /obj/item/clothing/head/helmet/lethal_filtre_helmet/bloodhound
 	ckeywhitelist = list("Valx001")
 	restricted_roles = list("Filtre")
