@@ -31,6 +31,7 @@
 	show_to_user_pentola(user)
 
 /obj/item/clothing/glasses/sunglasses/spy/pentola
+	name = "overwatch retinal projector"
 	desc = "A heads-up display used by fixers to monitor their operators in the field."
 	worn_icon = 'modular_nova/modules/modular_items/icons/modular_glasses_mob.dmi'
 	icon = 'modular_nova/modules/modular_items/icons/modular_glasses.dmi'
@@ -54,7 +55,7 @@
 	)
 
 /obj/item/storage/box/rxglasses/spyglasskit/pentola
-	name = "(UNFINISHED ROLE) fixer kit"
+	name = "(WIP) fixer kit"
 	desc = "Contains everything you need to provide overwatch to whatever poor gakster you send on a deadly quest. Cash bribe included."
 
 /obj/item/storage/box/rxglasses/spyglasskit/PopulateContents()
@@ -109,6 +110,7 @@
 	new /obj/item/clothing/head/utility/welding(src)
 	new /obj/item/lethalcash/c100(src)
 	new /obj/item/key_card/pentola/engineer(src)
+	new /obj/item/clothing/gloves/color/yellow(src)
 
 
 // choice beacon: lets pentola gamers pick who they wanna be
