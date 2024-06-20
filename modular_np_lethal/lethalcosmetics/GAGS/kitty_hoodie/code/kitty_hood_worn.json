@@ -1,0 +1,10 @@
+{
+	"kitty_hood": [
+		{
+			"type": "icon_state",
+			"icon_state": "kitty_hoodie_hood_worn",
+			"blend_mode": "overlay",
+			"color_ids": [ 1 ]
+		}
+	]
+}

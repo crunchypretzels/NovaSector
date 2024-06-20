@@ -62,3 +62,7 @@
 	item_path = /obj/item/clothing/suit/armor/lethal_filtre/super_light/runner
 	ckeywhitelist = list("CandleJax")
 	restricted_roles = list("Filtre")
+
+/datum/loadout_item/suit/kitty_hoodie
+	name = "disconcertingly twee hoodie"
+	item_path = /obj/item/clothing/suit/hooded/lethal_kitty_hoodie
