@@ -276,11 +276,6 @@
 	},
 /turf/open/indestructible/plating,
 /area/gakster_location/hideout_real)
-"bz" = (
-/mob/living/basic/mold/diseased_rat,
-/obj/effect/spawner/random/trash/mess,
-/turf/open/floor/plating,
-/area/gakster_location/outside)
 "bB" = (
 /obj/structure/deployable_barricade/metal,
 /turf/open/floor/iron/smooth,
@@ -411,6 +406,7 @@
 "ch" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/recharge_station,
 /turf/open/indestructible/dark/smooth_large,
 /area/gakster_location/hideout_real)
 "cj" = (
@@ -534,10 +530,6 @@
 /obj/structure/barricade/wooden,
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/gakster_location/war)
-"cS" = (
-/obj/effect/spawner/random/trash/grime,
-/turf/open/floor/plating,
-/area/gakster_location/outside)
 "cT" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/railing{
@@ -627,10 +619,6 @@
 /obj/structure/falsewall,
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/gakster_location/war)
-"ds" = (
-/obj/effect/spawner/random/trash/crushed_can,
-/turf/open/floor/plating,
-/area/gakster_location/outside)
 "dt" = (
 /obj/machinery/light/dim/directional/east,
 /turf/open/floor/plating,
@@ -646,6 +634,10 @@
 "dz" = (
 /obj/structure/noticeboard,
 /turf/closed/indestructible/wood,
+/area/gakster_location/hideout_real)
+"dB" = (
+/obj/machinery/vending/engineering,
+/turf/open/floor/iron/smooth_large,
 /area/gakster_location/hideout_real)
 "dC" = (
 /obj/effect/decal/cleanable/dirt,
@@ -834,10 +826,6 @@
 	},
 /turf/open/indestructible/dark/smooth_large,
 /area/gakster_location/hideout_real)
-"eG" = (
-/obj/effect/spawner/random/trash/mess,
-/turf/open/floor/plating,
-/area/gakster_location/outside)
 "eI" = (
 /obj/machinery/computer/order_console/gakster,
 /turf/open/floor/wood,
@@ -886,10 +874,6 @@
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/structure/table/reinforced/rglass,
 /obj/item/food/grown/poppy/lily,
-/mob/living/basic/meteor_heart{
-	name = "the dreamer";
-	desc = "Remember our promise."
-	},
 /turf/open/floor/iron/freezer,
 /area/gakster_location/war)
 "eU" = (
@@ -1315,6 +1299,7 @@
 /obj/effect/spawner/random/epic_loot/random_tools,
 /obj/effect/spawner/random/epic_loot/random_tools,
 /obj/effect/spawner/random/epic_loot/random_tools,
+/obj/item/autopsy_scanner,
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/hideout_real)
 "hs" = (
@@ -2295,10 +2280,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
-"mL" = (
-/obj/effect/spawner/random/trash/food_packaging,
-/turf/open/floor/plating,
-/area/gakster_location/outside)
 "mO" = (
 /obj/structure/barricade/wooden/snowed,
 /obj/effect/turf_decal/weather/snow/corner{
@@ -3436,10 +3417,6 @@
 	},
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/gakster_location/war)
-"td" = (
-/mob/living/basic/mold/diseased_rat,
-/turf/open/floor/plating,
-/area/gakster_location/outside)
 "te" = (
 /obj/structure/maintenance_loot_structure/medbox/random/advanced_loot,
 /obj/machinery/light/cold/dim/directional/north,
@@ -3879,7 +3856,9 @@
 /turf/open/floor/mineral/plastitanium,
 /area/gakster_location/filtre_spawn)
 "vv" = (
-/obj/machinery/button/door,
+/obj/machinery/button/door{
+	id = 1
+	},
 /turf/closed/indestructible/steel,
 /area/gakster_location/hideout_real)
 "vw" = (
@@ -4003,6 +3982,7 @@
 "wc" = (
 /obj/structure/closet/crate,
 /obj/item/stack/sheet/mineral/uranium/half,
+/obj/machinery/light/red/dim/directional/east,
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/hideout_real)
 "wd" = (
@@ -4928,10 +4908,6 @@
 /obj/effect/turf_decal/weather/snow/corner,
 /turf/open/floor/plating,
 /area/gakster_location/hideout_real)
-"Bg" = (
-/obj/effect/spawner/random/trash/garbage,
-/turf/open/floor/plating,
-/area/gakster_location/outside)
 "Bk" = (
 /obj/structure/table,
 /obj/effect/spawner/random/epic_loot/random_tools,
@@ -5160,7 +5136,7 @@
 /area/gakster_location/hideout_real)
 "Co" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/vending/engineering,
+/obj/effect/spawner/random/epic_loot/mech_ammo,
 /turf/open/indestructible/plating,
 /area/gakster_location/hideout_real)
 "Cp" = (
@@ -5828,10 +5804,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/gakster_location/war)
-"FW" = (
-/obj/effect/spawner/random/trash/cigbutt,
-/turf/open/floor/plating,
-/area/gakster_location/outside)
 "FX" = (
 /obj/structure/bed,
 /obj/structure/curtain/bounty,
@@ -6028,6 +6000,7 @@
 /obj/item/stack/sheet/glass/fifty,
 /obj/item/stack/sheet/iron/fifty,
 /obj/item/stack/sheet/plastic/fifty,
+/obj/machinery/light/red/dim/directional/east,
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/hideout_real)
 "Hi" = (
@@ -7159,8 +7132,9 @@
 /turf/open/floor/iron/smooth,
 /area/gakster_location/war)
 "Nm" = (
-/obj/effect/spawner/random/epic_loot/mech_ammo,
-/turf/open/floor/iron/smooth_large,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/recharge_station,
+/turf/open/indestructible/plating,
 /area/gakster_location/hideout_real)
 "No" = (
 /obj/structure/maintenance_loot_structure/wall_jacket/random/directional/east,
@@ -8301,7 +8275,6 @@
 "TN" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/blood/gibs/old,
-/obj/item/gun/ballistic/marsian_super_rifle,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/war)
 "TO" = (
@@ -11514,13 +11487,13 @@ PH
 PH
 PH
 PH
-tN
-tN
-tN
-tN
-tN
-tN
-tN
+PH
+PH
+PH
+PH
+PH
+PH
+PH
 PH
 PH
 Mw
@@ -11616,13 +11589,13 @@ PH
 PH
 PH
 PH
-tN
-Bg
-ds
-cS
-td
-td
-tN
+PH
+PH
+PH
+PH
+PH
+PH
+PH
 PH
 PH
 Mw
@@ -11718,13 +11691,13 @@ PH
 PH
 PH
 PH
-tN
-td
-yc
-yc
-mL
-eG
-tN
+PH
+PH
+PH
+PH
+PH
+PH
+PH
 PH
 PH
 Mw
@@ -11820,13 +11793,13 @@ PH
 PH
 PH
 PH
-tN
-yc
-Bg
-bz
-yc
-Bg
-tN
+PH
+PH
+PH
+PH
+PH
+PH
+PH
 PH
 PH
 Mw
@@ -11922,13 +11895,13 @@ PH
 PH
 PH
 PH
-tN
-cS
-yc
-FW
-yc
-yc
-tN
+PH
+PH
+PH
+PH
+PH
+PH
+PH
 PH
 PH
 Mw
@@ -12024,13 +11997,13 @@ PH
 PH
 PH
 PH
-tN
-yc
-yc
-td
-ds
-td
-tN
+PH
+PH
+PH
+PH
+PH
+PH
+PH
 PH
 PH
 Mw
@@ -12126,13 +12099,13 @@ PH
 PH
 PH
 PH
-tN
-Bg
-bz
-yc
-Bg
-yc
-tN
+PH
+PH
+PH
+PH
+PH
+PH
+PH
 PH
 PH
 Mw
@@ -12228,13 +12201,13 @@ PH
 PH
 PH
 PH
-tN
-tN
-tN
-tN
-tN
-tN
-tN
+PH
+PH
+PH
+PH
+PH
+PH
+PH
 PH
 PH
 Mw
@@ -59030,7 +59003,7 @@ Ay
 jb
 hu
 hu
-Nm
+Yw
 pE
 Yw
 Yw
@@ -59230,7 +59203,7 @@ Ea
 Ea
 Ea
 KC
-Yw
+dB
 jb
 hu
 qp
@@ -59335,7 +59308,7 @@ KC
 KC
 RT
 HU
-ry
+Nm
 KC
 Ea
 KC
