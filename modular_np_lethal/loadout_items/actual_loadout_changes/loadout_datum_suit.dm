@@ -27,7 +27,7 @@
 	ckeywhitelist = list("DawsonKeyes")
 	restricted_roles = list("Filtre")
 
-/datum/loadout_item/head/bloodhound_armor
+/datum/loadout_item/suit/bloodhound_armor
 	name = "'Bloodhound' type III armor kit"
 	item_path = /obj/item/clothing/suit/armor/lethal_filtre/bloodhound
 	ckeywhitelist = list("Valx001")
