@@ -3,11 +3,10 @@
 	desc = "A design that originates in cheap novelty clothing, but this time made in a high quality sweatshirt fleece. The \
 	way the ears were cut and sewn makes them stand up in a striking and sculptural way, which helps a playful design look \
 	a little more sophisticated. This one is pleasantly scented."
+	icon = 'modular_np_lethal/lethalcosmetics/icons/kitty_hoodie_obj.dmi'
 	icon_state = "kitty_hoodie"
-	greyscale_config = /datum/greyscale_config/kitty_hoodie
-	greyscale_config_worn = /datum/greyscale_config/kitty_hoodie/worn
-	greyscale_colors = "#666633"
-	flags_1 = IS_PLAYER_COLORABLE_1
+	worn_icon = 'modular_np_lethal/lethalcosmetics/icons/kitty_hoodie.dmi'
+	worn_icon_state = "kitty_hoodie"
 	slot_flags = ITEM_SLOT_OCLOTHING|ITEM_SLOT_NECK
 	body_parts_covered = CHEST|GROIN|ARMS
 	cold_protection = CHEST|GROIN|ARMS
@@ -31,24 +30,15 @@
 		/obj/item/toy,
 	)
 
-
-/obj/item/clothing/suit/hooded/lethal_kitty_hoodie/set_greyscale(list/colors, new_config, new_worn_config)
-	. = ..()
-	if(!hood)
-		return
-	var/list/coat_colors = SSgreyscale.ParseColorString(greyscale_colors)
-	var/list/new_coat_colors = coat_colors.Copy(1)
-	hood.set_greyscale(new_coat_colors)
-	hood.update_slot_icon()
-
-/obj/item/clothing/suit/hooded/lethal_kitty_hoodie/on_hood_created(obj/item/clothing/head/hooded/hood)
-	. = ..()
-	var/list/coat_colors = (SSgreyscale.ParseColorString(greyscale_colors))
-	var/list/new_coat_colors = coat_colors.Copy(1)
-	hood.set_greyscale(new_coat_colors) //Adopt the suit's grayscale coloring for visual clarity.
-
 /obj/item/clothing/head/hooded/lethal_kitty_hood
 	name = "disconcertingly twee hood"
 	desc = "It makes you look smaller and cuter, but it takes a bold personality to wear it outside."
-	greyscale_config = /datum/greyscale_config/kitty_hood
-	greyscale_config_worn = /datum/greyscale_config/kitty_hood/worn
+	icon = 'modular_np_lethal/lethalcosmetics/icons/kitty_hoodie_obj.dmi'
+	icon_state = "kitty_hoodie_hood_worn"
+	worn_icon = 'modular_np_lethal/lethalcosmetics/icons/kitty_hoodie.dmi'
+	worn_icon_state = "kitty_hoodie_hood_worn"
+	body_parts_covered = HEAD
+	cold_protection = HEAD
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	flags_inv = HIDEHAIR|HIDEEARS
+	armor_type = /datum/armor/hooded_winterhood
