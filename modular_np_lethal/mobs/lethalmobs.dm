@@ -12,6 +12,7 @@
 	ai_controller = /datum/ai_controller/basic_controller/trooper/gakster
 	loot = list(/obj/effect/mob_spawn/corpse/human/gakstermob)
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/gakstermob
+	mob_size = MOB_SIZE_HUGE
 	move_resist = MOVE_FORCE_NORMAL
 	speed = 0.8
 	// What range do we want this NPC to operate at?
