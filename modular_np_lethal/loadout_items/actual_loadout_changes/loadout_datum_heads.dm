@@ -49,7 +49,7 @@
 
 /datum/loadout_item/head/honorgaurd_armor
 	name = "'Kharuul' type IV ballistic helmet'"
-	item_path = /obj/item/clothing/head/helmet/lethal_filtre_helmet/honorguard
+	item_path = /obj/item/clothing/head/helmet/lethal_filtre_helmet/light/honorguard
 	ckeywhitelist = list("Luckydente")
 	restricted_roles = list("Filtre")
 
