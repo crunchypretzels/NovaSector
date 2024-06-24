@@ -64,7 +64,7 @@
 	newbug.linked_glasses = newglasses
 	newglasses.linked_bug = newbug
 	new /obj/item/paper/fluff/nerddocs(src)
-	new /obj/item/lethalcash/c1000(src)
+	new /obj/item/lethalcash/bundle/c1000(src)
 	new /obj/item/door_remote/omni/pentola(src)
 	new /obj/item/modular_computer/laptop/preset/pentola(src)
 	new /obj/item/circuitboard/computer/advanced_camera(src)
@@ -81,7 +81,7 @@
 	new /obj/item/reagent_containers/hypospray/medipen/deforest/krotozine(src)
 	new /obj/item/defibrillator/loaded(src)
 	new /obj/item/clothing/glasses/hud/health(src)
-	new /obj/item/lethalcash/c200(src)
+	new /obj/item/lethalcash/bundle/c200(src)
 	new /obj/item/key_card/pentola/medical(src)
 // service kit. stuff to serve people food and drink n shit
 
@@ -99,7 +99,7 @@
 	new /obj/item/storage/box/ingredients/random(src)
 	new /obj/item/storage/box/ingredients/random(src)
 	new /obj/item/key_card/pentola/chef(src)
-	new /obj/item/lethalcash/c200(src)
+	new /obj/item/lethalcash/bundle/c200(src)
 
 /obj/item/storage/box/pentolamechanic
 	name = "pentola mechanic's kit"
@@ -108,7 +108,7 @@
 /obj/item/storage/box/pentolamechanic/PopulateContents()
 	new /obj/item/storage/toolbox/mechanical(src)
 	new /obj/item/clothing/head/utility/welding(src)
-	new /obj/item/lethalcash/c100(src)
+	new /obj/item/lethalcash/bundle/c100(src)
 	new /obj/item/key_card/pentola/engineer(src)
 	new /obj/item/clothing/gloves/color/yellow(src)
 
