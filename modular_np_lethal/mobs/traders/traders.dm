@@ -3,6 +3,7 @@
 	desc = "A newer face around the pentola, they've already made a name for themself with their famous meat."
 	basic_mob_flags = NONE
 	gender = PLURAL
+	species_path = /datum/species/human/felinid
 	ranged_attack_casing = /obj/item/ammo_casing/c35sol
 	held_weapon_visual = /obj/item/gun/ballistic/automatic/sol_smg/evil
 
@@ -58,4 +59,3 @@
 	loot = list(/obj/effect/mob_spawn/corpse/human/lethal_pusher)
 
 	trader_data_path = /datum/trader_data/lethal_pusher
-

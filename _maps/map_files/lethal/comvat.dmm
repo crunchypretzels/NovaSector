@@ -30,6 +30,10 @@
 /area/gakster_location/outside)
 "an" = (
 /obj/item/storage/cans/sixbeer,
+/obj/item/bait_can/worm{
+	pixel_x = 5;
+	pixel_y = -6
+	},
 /turf/open/indestructible/plating,
 /area/gakster_location/hideout_real)
 "ao" = (
@@ -1728,6 +1732,13 @@
 /obj/machinery/iv_drip/health_station/directional/north,
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/gakster_location/filtre_spawn)
+"jM" = (
+/obj/item/flashlight/lantern/on{
+	pixel_x = 10;
+	pixel_y = 7
+	},
+/turf/open/indestructible/plating,
+/area/gakster_location/hideout_real)
 "jN" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/railing{
@@ -4175,8 +4186,9 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
 "wM" = (
-/turf/open/chasm,
-/area/misc/cordon)
+/obj/machinery/food_cart,
+/turf/open/floor/wood,
+/area/gakster_location/hideout_real)
 "wO" = (
 /obj/machinery/light/red/dim/directional/north,
 /obj/effect/decal/cleanable/dirt,
@@ -5672,6 +5684,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
+"EN" = (
+/obj/machinery/light/red/dim/directional/west,
+/turf/open/floor/wood,
+/area/gakster_location/hideout_real)
 "EP" = (
 /obj/machinery/light/red/directional/west,
 /turf/open/floor/catwalk_floor/iron_smooth,
@@ -6040,6 +6056,10 @@
 /obj/machinery/vending/evil_clothing,
 /obj/effect/turf_decal/delivery/red,
 /turf/open/indestructible/dark/smooth_large,
+/area/gakster_location/hideout_real)
+"He" = (
+/obj/item/chair,
+/turf/open/floor/wood,
 /area/gakster_location/hideout_real)
 "Hg" = (
 /obj/structure/fluff/metalpole{
@@ -6416,6 +6436,10 @@
 /obj/machinery/light/dim/directional/south,
 /obj/structure/table/reinforced,
 /turf/open/floor/mineral/titanium/white,
+/area/gakster_location/hideout_real)
+"Jg" = (
+/obj/machinery/light/red/dim/directional/east,
+/turf/open/floor/wood,
 /area/gakster_location/hideout_real)
 "Jh" = (
 /obj/structure/table,
@@ -54325,7 +54349,7 @@ Ea
 Ea
 CE
 CE
-wM
+YN
 CE
 CE
 Vi
@@ -54425,10 +54449,10 @@ Ea
 Ea
 Ea
 KC
-wM
-wM
-wM
-wM
+YN
+YN
+YN
+YN
 CE
 Vi
 "}
@@ -54527,10 +54551,10 @@ FN
 Ea
 an
 DE
-wM
-wM
-wM
-wM
+YN
+YN
+YN
+YN
 CE
 Vi
 "}
@@ -54629,9 +54653,9 @@ FN
 FN
 Cw
 Az
-wM
-wM
-wM
+YN
+YN
+YN
 CE
 CE
 Vi
@@ -54729,11 +54753,11 @@ FN
 FN
 Ea
 FN
-FN
+jM
 Jv
-wM
-wM
-wM
+YN
+YN
+YN
 CE
 CE
 Vi
@@ -54833,10 +54857,10 @@ Ea
 Ea
 Ea
 KC
-wM
-wM
-wM
-wM
+YN
+YN
+YN
+YN
 CE
 Vi
 "}
@@ -54935,10 +54959,10 @@ Ea
 Ea
 Ea
 Ea
-wM
-wM
-wM
-wM
+YN
+YN
+YN
+YN
 CE
 Vi
 "}
@@ -55037,9 +55061,9 @@ Ea
 Ea
 Ea
 Ea
-wM
-wM
-wM
+YN
+YN
+YN
 CE
 CE
 Vi
@@ -55139,8 +55163,8 @@ Ea
 Ea
 Ea
 Ea
-wM
-wM
+YN
+YN
 CE
 CE
 Vi
@@ -55841,8 +55865,8 @@ Th
 FN
 gK
 rY
-gK
-gK
+wM
+EN
 gK
 uJ
 Jt
@@ -55941,11 +55965,11 @@ Ea
 uJ
 MK
 FN
-FN
+uZ
 rY
 Ei
 gK
-gK
+SX
 sq
 RR
 yY
@@ -56042,7 +56066,7 @@ Ea
 Ea
 uJ
 FN
-FN
+uZ
 FN
 Wi
 oR
@@ -56350,7 +56374,7 @@ SQ
 FN
 FN
 CD
-FN
+uZ
 gK
 gK
 gK
@@ -56454,8 +56478,8 @@ FN
 FN
 FN
 eO
-gK
-gK
+Jg
+He
 Mx
 hc
 yY
