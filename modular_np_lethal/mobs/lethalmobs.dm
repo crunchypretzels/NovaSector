@@ -3,6 +3,9 @@
 	for (var/obj/item/organ/internal/part in spawned_human.organs)
 		part.organ_flags |= ORGAN_UNREMOVABLE
 
+	// clean up corpses after 5 minutes
+	spawned_human.AddElement(/datum/element/temporary_atom, 5 MINUTES)
+
 /mob/living/basic/trooper/gakster
 	name = "Gakster"
 	desc = "This assclown looks like they barely know what they're doing."
