@@ -82,6 +82,10 @@
 	},
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/hideout_real)
+"aF" = (
+/mob/living/basic/trader/stalker,
+/turf/open/floor/catwalk_floor/iron_smooth,
+/area/gakster_location/war)
 "aH" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/light/red/dim/directional/west,
@@ -876,6 +880,14 @@
 /obj/item/food/grown/poppy/lily,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/war)
+"eS" = (
+/obj/structure/railing,
+/obj/effect/turf_decal/weather/snow/corner,
+/obj/structure/chair/plastic{
+	dir = 4
+	},
+/turf/open/indestructible/plating,
+/area/gakster_location/hideout_real)
 "eU" = (
 /obj/machinery/light/red/dim/directional/west,
 /turf/open/floor/iron/grimy,
@@ -996,6 +1008,14 @@
 /obj/effect/spawner/random/structure/shipping_container,
 /turf/open/indestructible/plating,
 /area/gakster_location/inborn_spawn)
+"fN" = (
+/obj/structure/railing,
+/obj/effect/turf_decal/weather/snow/corner,
+/obj/structure/chair/plastic{
+	dir = 8
+	},
+/turf/open/indestructible/plating,
+/area/gakster_location/hideout_real)
 "fO" = (
 /obj/structure/chair/sofa/bench{
 	dir = 4
@@ -2615,6 +2635,10 @@
 /obj/machinery/light/cold/dim/directional/north,
 /turf/open/floor/mineral/titanium/white,
 /area/gakster_location/filtre_spawn)
+"oD" = (
+/obj/item/storage/cans/sixbeer,
+/turf/open/indestructible/plating,
+/area/gakster_location/hideout_real)
 "oE" = (
 /obj/structure/rack/shelf,
 /obj/effect/spawner/random/epic_loot/random_silly_arms,
@@ -3156,6 +3180,12 @@
 /obj/structure/bedsheetbin,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/hideout_real)
+"rI" = (
+/obj/structure/railing,
+/obj/effect/turf_decal/weather/snow/corner,
+/obj/machinery/fishing_portal_generator,
+/turf/open/indestructible/plating,
+/area/gakster_location/hideout_real)
 "rJ" = (
 /obj/structure/table/wood/poker,
 /obj/item/flashlight/lamp/green{
@@ -3209,6 +3239,10 @@
 /obj/structure/table,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
+"sa" = (
+/mob/living/basic/trader/old_fisherman,
+/turf/open/indestructible/plating,
+/area/gakster_location/hideout_real)
 "sb" = (
 /obj/structure/table,
 /obj/structure/maintenance_loot_structure/computer_tower/random{
@@ -3470,6 +3504,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/smooth,
 /area/gakster_location/war)
+"tt" = (
+/mob/living/basic/trader/grey_gakdog,
+/turf/open/indestructible/plating,
+/area/gakster_location/hideout_real)
 "tu" = (
 /obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/iron/dark/smooth_large,
@@ -4141,15 +4179,8 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
 "wM" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/indestructible/plating,
-/area/gakster_location/hideout_real)
+/turf/open/chasm,
+/area/misc/cordon)
 "wO" = (
 /obj/machinery/light/red/dim/directional/north,
 /obj/effect/decal/cleanable/dirt,
@@ -4160,6 +4191,10 @@
 /obj/structure/table,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
+"wT" = (
+/obj/structure/holosign/barrier/engineering,
+/turf/open/indestructible/plating,
+/area/gakster_location/hideout_real)
 "wU" = (
 /obj/vehicle/sealed/mecha/ripley/mining,
 /turf/open/floor/catwalk_floor/iron_smooth,
@@ -7938,6 +7973,10 @@
 	dir = 1
 	},
 /turf/open/floor/wood,
+/area/gakster_location/hideout_real)
+"RN" = (
+/mob/living/basic/trader/lethal_pusher,
+/turf/open/indestructible/plating,
 /area/gakster_location/hideout_real)
 "RR" = (
 /obj/effect/decal/cleanable/dirt,
@@ -30988,7 +31027,7 @@ Vi
 NT
 Xp
 Sn
-dK
+aF
 dK
 dK
 dK
@@ -54133,9 +54172,9 @@ Ea
 Ea
 Ea
 Vi
-Vi
-Vi
-Vi
+CE
+CE
+CE
 Vi
 Vi
 "}
@@ -54234,11 +54273,11 @@ Ea
 Ea
 Ea
 Ea
-Vi
-Vi
-Vi
-Vi
-Vi
+CE
+CE
+wM
+CE
+CE
 Vi
 "}
 (40,1,5) = {"
@@ -54336,11 +54375,11 @@ Ea
 Ea
 Ea
 KC
-Vi
-Vi
-Vi
-Vi
-Vi
+wM
+wM
+wM
+wM
+CE
 Vi
 "}
 (41,1,5) = {"
@@ -54432,17 +54471,17 @@ ZY
 ZY
 FN
 yY
-Kk
+FN
+vg
+FN
 Ea
-Ea
-Ea
-Ea
-Ea
-Vi
-Vi
-Vi
-Vi
-Vi
+oD
+eS
+wM
+wM
+wM
+wM
+CE
 Vi
 "}
 (42,1,5) = {"
@@ -54534,17 +54573,17 @@ jG
 jG
 FN
 Cf
-Kk
-Ea
-Ea
-Ea
-Ea
-Ea
-Vi
-Vi
-Vi
-Vi
-Vi
+FN
+FN
+FN
+FN
+sa
+rI
+wM
+wM
+wM
+CE
+CE
 Vi
 "}
 (43,1,5) = {"
@@ -54636,17 +54675,17 @@ qo
 qo
 FN
 yY
-Kk
+FN
+FN
 Ea
-Ea
-Ea
-Ea
-Ea
-Vi
-Vi
-Vi
-Vi
-Vi
+FN
+FN
+fN
+wM
+wM
+wM
+CE
+CE
 Vi
 "}
 (44,1,5) = {"
@@ -54744,11 +54783,11 @@ Ea
 Ea
 Ea
 KC
-Vi
-Vi
-Vi
-Vi
-Vi
+wM
+wM
+wM
+wM
+CE
 Vi
 "}
 (45,1,5) = {"
@@ -54846,11 +54885,11 @@ Ea
 Ea
 Ea
 Ea
-Vi
-Vi
-Vi
-Vi
-Vi
+wM
+wM
+wM
+wM
+CE
 Vi
 "}
 (46,1,5) = {"
@@ -54948,11 +54987,11 @@ Ea
 Ea
 Ea
 Ea
-Vi
-Vi
-Vi
-Vi
-Vi
+wM
+wM
+wM
+CE
+CE
 Vi
 "}
 (47,1,5) = {"
@@ -55050,10 +55089,10 @@ Ea
 Ea
 Ea
 Ea
-Vi
-Vi
-Vi
-Vi
+wM
+wM
+CE
+CE
 Vi
 Vi
 "}
@@ -55152,9 +55191,9 @@ Ea
 Ea
 Ea
 KC
-Vi
-Vi
-Vi
+CE
+CE
+CE
 Vi
 Vi
 Vi
@@ -55646,13 +55685,13 @@ Ea
 Ea
 Ea
 KC
-Ea
-Ea
-Ea
+uJ
+uJ
+uJ
 KC
-Ea
-Ea
-Ea
+uJ
+uJ
+uJ
 Uu
 OK
 Mc
@@ -55747,16 +55786,16 @@ gJ
 Ea
 Ea
 Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Me
+uJ
+FN
+FN
+FN
+FN
+FN
+FN
+FN
+uJ
+Jt
 yY
 Kk
 Ea
@@ -55849,16 +55888,16 @@ KC
 Ea
 Ea
 Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Do
+uJ
+tt
+FN
+FN
+FN
+FN
+FN
+FN
+sq
+RR
 yY
 Kk
 Ea
@@ -55951,16 +55990,16 @@ Ea
 Ea
 Ea
 Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-wM
+uJ
+FN
+FN
+FN
+FN
+FN
+FN
+FN
+uJ
+oe
 Cf
 Kk
 Ea
@@ -56054,13 +56093,13 @@ Ea
 Ea
 Ea
 KC
-Ea
-Ea
-Ea
-KC
-Ea
-Ea
-Ea
+FN
+FN
+FN
+FN
+FN
+FN
+FN
 KC
 UB
 Mc
@@ -56154,17 +56193,17 @@ Ea
 Ea
 Ea
 Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Me
+Sv
+SQ
+wT
+FN
+FN
+FN
+FN
+FN
+FN
+Mx
+Jt
 Cf
 Kk
 Ea
@@ -56255,18 +56294,18 @@ Ea
 Ea
 Ea
 Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Do
+Sv
+Sv
+SQ
+FN
+FN
+FN
+FN
+FN
+FN
+FN
+Mx
+RR
 Cf
 dp
 Ea
@@ -56357,18 +56396,18 @@ Ea
 Ea
 Ea
 Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-Ea
-tC
+Sv
+Sv
+PA
+FN
+FN
+FN
+FN
+FN
+FN
+FN
+Mx
+hc
 yY
 wl
 Ea
@@ -56458,13 +56497,13 @@ Ea
 Ea
 Ea
 KC
-Ea
-Ea
-Ea
+Sv
+Sv
+Sv
 KC
-Ea
-Ea
-Ea
+FN
+FN
+FN
 uJ
 uJ
 uJ
@@ -56560,11 +56599,11 @@ Ea
 KC
 Ea
 Ea
-Ea
-Ea
-Ea
-Ea
-Ea
+Sv
+Sv
+Sv
+kP
+FN
 uJ
 uJ
 uJ
@@ -56662,7 +56701,7 @@ ur
 XI
 wG
 Ea
-Ea
+Sv
 uJ
 uJ
 uJ
@@ -56764,7 +56803,7 @@ Ea
 Ea
 Yv
 Oa
-Ea
+Sv
 uJ
 hq
 im
@@ -57355,7 +57394,7 @@ Ea
 Ea
 Ea
 QB
-FN
+RN
 FN
 FN
 FN
