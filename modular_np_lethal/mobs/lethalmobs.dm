@@ -275,7 +275,7 @@
 	desc = "Armed with a Ramu 6 gauge shotgun, this gakster is notorious for their potency in close quarters combat."
 	maxHealth = 450
 	health = 450
-	faction = NONE
+	faction = list("UpCloseAndPersonal")
 	loot = list(/obj/effect/mob_spawn/corpse/human/fathomer, /obj/item/gun/ballistic/shotgun/ramu, /obj/item/ammo_box/magazine/ammo_stack/s6gauge/prefilled/longshot = 2)
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/fathomer
 	r_hand = /obj/item/gun/ballistic/shotgun/ramu
@@ -336,7 +336,7 @@
 	desc = "A near-mythical triple-digit gakster wielding a rare double-bladed energy sword and clad in the heaviest of armor, who remains lightning fast despite it all. Are you certain whatever you're doing is worth it?"
 	maxHealth = 600
 	health = 600
-	faction = NONE
+	faction = list("NeverShouldHaveComeHere")
 	loot = list(/obj/effect/mob_spawn/corpse/human/prophet, /obj/item/dualsaber/red)
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/prophet
 	melee_damage_lower = 40
