@@ -225,7 +225,8 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 	var/value = 0
 	var/obj/item/lethalcash/cash = customer.is_holding_item_of_type(/obj/item/lethalcash) // LETHAL EDIT - allows traders to use our currency
 	if(cash)
-		value += cash.credits
+		//message_admins("[value] is += [cash.value]")
+		value += cash.value // LETHAL EDIT
 	if((value >= the_cost) && cash)
 		return cash.spend(the_cost)
 	return FALSE //Purchase unsuccessful
@@ -352,7 +353,7 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
  * * customer - Reference to a mob; The mob we put the holochip in hands of
  */
 /datum/component/trader/proc/generate_cash(value, mob/customer)
-	var/obj/item/lethalcash/chip = new /obj/item/lethalcash(get_turf(customer), value) // LETHAL EDIT - lets vendors pay out in our currency
+	var/obj/item/lethalcash/chip = new /obj/item/lethalcash(get_turf(customer), value) // LETHAL EDIT - allows traders to use our currency
 	customer.put_in_hands(chip)
 
 ///Talk about what items are being sold/wanted by the trader and in what quantity or lore

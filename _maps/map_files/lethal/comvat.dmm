@@ -775,8 +775,8 @@
 /turf/closed/indestructible/wood,
 /area/gakster_location/hideout_real)
 "et" = (
-/obj/structure/window/reinforced/tinted/frosted,
 /obj/effect/spawner/random/trash/mess,
+/obj/structure/window/reinforced/tinted/frosted/spawner/directional/south,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/hideout_real)
 "eu" = (
@@ -1896,9 +1896,7 @@
 "kG" = (
 /obj/machinery/shower/directional/north,
 /obj/structure/fluff/shower_drain,
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 4
-	},
+/obj/structure/window/reinforced/tinted/frosted/spawner/directional/east,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/hideout_real)
 "kI" = (
@@ -1988,10 +1986,8 @@
 /turf/open/indestructible/plating,
 /area/gakster_location/hideout_real)
 "le" = (
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 1
-	},
 /obj/machinery/light/small/dim/directional/west,
+/obj/structure/window/reinforced/tinted/frosted/spawner/directional/north,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/hideout_real)
 "lf" = (
@@ -2437,9 +2433,7 @@
 "nu" = (
 /obj/structure/fluff/shower_drain,
 /obj/machinery/shower/directional/south,
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 8
-	},
+/obj/structure/window/reinforced/tinted/frosted/spawner/directional/west,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/hideout_real)
 "nw" = (
@@ -3809,6 +3803,10 @@
 /obj/machinery/newscaster/directional/south,
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/hideout_real)
+"uR" = (
+/obj/structure/railing,
+/turf/open/misc/asteroid/snow/standard_air,
+/area/gakster_location/hideout_real)
 "uT" = (
 /obj/structure/table,
 /obj/effect/spawner/random/trash/garbage,
@@ -4953,6 +4951,13 @@
 /obj/effect/turf_decal/weather/snow/corner,
 /turf/open/floor/plating,
 /area/gakster_location/hideout_real)
+"Bg" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/turf/open/openspace,
+/area/gakster_location/hideout_real)
 "Bk" = (
 /obj/structure/table,
 /obj/effect/spawner/random/epic_loot/random_tools,
@@ -4979,9 +4984,9 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
 "Bu" = (
-/obj/structure/window/reinforced/tinted/frosted,
 /obj/effect/spawner/random/trash/mess,
 /obj/machinery/light/small/dim/directional/west,
+/obj/structure/window/reinforced/tinted/frosted/spawner/directional/south,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/hideout_real)
 "Bv" = (
@@ -5758,9 +5763,7 @@
 "Fm" = (
 /obj/machinery/shower/directional/south,
 /obj/structure/fluff/shower_drain,
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 4
-	},
+/obj/structure/window/reinforced/tinted/frosted/spawner/directional/east,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/hideout_real)
 "Fn" = (
@@ -6321,12 +6324,12 @@
 /turf/open/floor/iron/smooth_large,
 /area/gakster_location/hideout_real)
 "Iz" = (
-/obj/structure/window/reinforced/tinted/frosted,
 /obj/machinery/light/small/dim/directional/east,
 /obj/effect/decal/cleanable/blood,
 /obj/item/ammo_casing/spent{
 	pixel_y = 6
 	},
+/obj/structure/window/reinforced/tinted/frosted/spawner/directional/south,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/hideout_real)
 "IB" = (
@@ -8463,9 +8466,7 @@
 "Up" = (
 /obj/machinery/shower/directional/north,
 /obj/structure/fluff/shower_drain,
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 8
-	},
+/obj/structure/window/reinforced/tinted/frosted/spawner/directional/west,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/hideout_real)
 "Uq" = (
@@ -8842,12 +8843,10 @@
 "Wk" = (
 /obj/machinery/shower/directional/south,
 /obj/structure/fluff/shower_drain,
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 8
-	},
 /obj/effect/spawner/random/trash/mess,
 /obj/effect/mob_spawn/corpse/human/gakstermob,
 /obj/effect/decal/cleanable/blood,
+/obj/structure/window/reinforced/tinted/frosted/spawner/directional/west,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/hideout_real)
 "Wn" = (
@@ -9333,10 +9332,8 @@
 /turf/open/floor/iron/freezer,
 /area/gakster_location/war)
 "YG" = (
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 1
-	},
 /obj/machinery/light/small/dim/directional/east,
+/obj/structure/window/reinforced/tinted/frosted/spawner/directional/north,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/hideout_real)
 "YH" = (
@@ -54751,7 +54748,7 @@ FN
 yY
 FN
 FN
-Ea
+Sv
 FN
 jM
 Jv
@@ -54853,9 +54850,9 @@ bY
 Mc
 Lp
 KC
-Ea
-Ea
-Ea
+Sv
+Sv
+Sv
 KC
 YN
 YN
@@ -54954,10 +54951,10 @@ YN
 GL
 yY
 Kk
-Ea
-Ea
-Ea
-Ea
+Sv
+Sv
+Sv
+Sv
 Ea
 YN
 YN
@@ -55056,11 +55053,11 @@ YN
 ks
 yY
 Kk
-Ea
-Ea
-Ea
-Ea
-Ea
+Sv
+Sv
+Sv
+Sv
+uR
 YN
 YN
 YN
@@ -55159,10 +55156,10 @@ hl
 yY
 vE
 Ea
+Sv
 Ea
-Ea
-Ea
-Ea
+Sv
+uR
 YN
 YN
 CE
@@ -55261,7 +55258,7 @@ bY
 Mc
 OK
 KC
-Ea
+Sv
 Ea
 Ea
 KC
@@ -68514,7 +68511,7 @@ CQ
 CQ
 CQ
 FD
-FO
+Bg
 XS
 CQ
 CQ

@@ -160,3 +160,17 @@
 		usr.put_in_hands(fundle)
 		if(istype(H) && !H.get_active_hand())
 			H.put_in_hands(fundle)
+
+/obj/item/lethalcash/proc/spend(amount, pay_anyway = FALSE)
+	if(value >= amount)
+		//message_admins("[value] is greater than or equal to [amount]")
+		value -= amount
+		if(value == 0)
+			qdel(src)
+		update_appearance()
+		return amount
+	else if(pay_anyway)
+		qdel(src)
+		return value
+	else
+		return 0
