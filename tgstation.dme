@@ -8500,6 +8500,7 @@
 #include "modular_np_lethal\lethalcosmetics\code\hair.dm"
 #include "modular_np_lethal\lethalcosmetics\code\kitty_hoodie.dm"
 #include "modular_np_lethal\lethalcosmetics\code\loadout_stuff.dm"
+#include "modular_np_lethal\lethalcosmetics\code\slot_overrides.dm"
 #include "modular_np_lethal\lethalguns\code\bullets.dm"
 #include "modular_np_lethal\lethalguns\code\giant_weapon_buff_real.dm"
 #include "modular_np_lethal\lethalguns\code\grenades.dm"
@@ -8562,4 +8563,5 @@
 #include "modular_np_lethal\mutations\code\chameleon.dm"
 #include "modular_np_lethal\mutations\code\cryokinesis.dm"
 #include "modular_np_lethal\plum_balance\FUN.dm"
+
 // END_INCLUDE
