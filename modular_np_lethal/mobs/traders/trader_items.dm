@@ -83,12 +83,12 @@
 	icon_state = "sindano_evil"
 	max_integrity = 2000
 
-/obj/item/lethal_gakster_patch
+/*/obj/item/lethal_gakster_patch
 	name = "company flair"
 	desc = "An accessory that denoted its wearer's affiliation with a particular company."
 	icon = 'icons/obj/clothing/accessories.dmi'
 	icon_state = "anti_sec"
-	w_class = WEIGHT_CLASS_TINY
+	w_class = WEIGHT_CLASS_TINY*/
 
 //knives' stuff
 

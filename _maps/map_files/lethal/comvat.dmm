@@ -444,11 +444,6 @@
 /obj/structure/curtain/bounty,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
-"cr" = (
-/obj/structure/table,
-/obj/item/lethalcash/c1,
-/turf/open/floor/iron/dark/smooth_large,
-/area/gakster_location/war)
 "cs" = (
 /obj/structure/rack/shelf,
 /obj/effect/spawner/random/epic_loot/medkit,
@@ -2800,7 +2795,6 @@
 /area/gakster_location/war)
 "pw" = (
 /obj/structure/table/glass,
-/obj/structure/table/glass,
 /obj/effect/spawner/random/epic_loot/random_documents,
 /turf/open/floor/glass,
 /area/gakster_location/hideout_real)
@@ -4327,11 +4321,6 @@
 /obj/effect/spawner/random/epic_loot/random_provisions,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
-"xJ" = (
-/obj/machinery/light/red/dim/directional/north,
-/obj/item/lethalcash/c1,
-/turf/open/floor/catwalk_floor/iron_smooth,
-/area/gakster_location/war)
 "xL" = (
 /obj/structure/railing/wooden_fencing,
 /obj/effect/decal/cleanable/dirt,
@@ -4443,10 +4432,6 @@
 /obj/effect/spawner/random/epic_loot/random_provisions,
 /obj/effect/spawner/random/epic_loot/random_provisions,
 /turf/open/floor/iron/dark/smooth_large,
-/area/gakster_location/war)
-"ym" = (
-/obj/item/lethalcash/c1,
-/turf/open/floor/iron/smooth,
 /area/gakster_location/war)
 "yo" = (
 /obj/structure/railing/wooden_fencing{
@@ -5283,11 +5268,6 @@
 /obj/effect/spawner/random/trash/food_packaging,
 /turf/open/misc/asteroid/snow/standard_air,
 /area/gakster_location/inborn_spawn)
-"CL" = (
-/obj/machinery/light/red/dim/directional/west,
-/obj/item/lethalcash/c1,
-/turf/open/floor/iron/smooth,
-/area/gakster_location/war)
 "CO" = (
 /obj/machinery/light/cold/dim/directional/east,
 /turf/open/floor/iron/smooth,
@@ -6929,8 +6909,8 @@
 /turf/open/indestructible/hoteltile,
 /area/gakster_location/hideout_real)
 "LF" = (
-/obj/structure/window/reinforced/tinted/frosted,
 /obj/machinery/light/small/dim/directional/east,
+/obj/structure/window/reinforced/tinted/frosted/spawner/directional/south,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/hideout_real)
 "LG" = (
@@ -7190,11 +7170,6 @@
 	},
 /turf/open/indestructible/stone,
 /area/gakster_location/hideout_real)
-"Nc" = (
-/obj/structure/table,
-/obj/item/lethalcash/c20,
-/turf/open/floor/iron/dark/smooth_large,
-/area/gakster_location/war)
 "Nd" = (
 /obj/machinery/light/red/dim/directional/east,
 /turf/open/openspace,
@@ -8075,10 +8050,8 @@
 "Sc" = (
 /obj/machinery/shower/directional/south,
 /obj/structure/fluff/shower_drain,
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 8
-	},
 /obj/effect/spawner/random/trash/soap,
+/obj/structure/window/reinforced/tinted/frosted/spawner/directional/west,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/hideout_real)
 "Sf" = (
@@ -9217,7 +9190,6 @@
 "Yc" = (
 /obj/structure/lattice/catwalk,
 /obj/effect/mob_spawn/corpse/human/gakstermob,
-/obj/item/lethalcash/c1000,
 /turf/open/openspace,
 /area/gakster_location/outside)
 "Yd" = (
@@ -42061,7 +42033,7 @@ Lh
 lq
 tq
 tq
-ym
+Lh
 Lh
 Lh
 NT
@@ -43058,7 +43030,7 @@ NT
 Lh
 NT
 iw
-cr
+hz
 iA
 NT
 NT
@@ -43663,7 +43635,7 @@ dK
 ep
 Lh
 FE
-Nc
+hz
 Ou
 Lh
 ep
@@ -47065,7 +47037,7 @@ dK
 VP
 dK
 dK
-CL
+VP
 dK
 dK
 ep
@@ -48528,7 +48500,7 @@ dK
 NT
 ep
 NT
-xJ
+gg
 NT
 dK
 NT

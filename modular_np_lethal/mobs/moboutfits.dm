@@ -13,7 +13,7 @@
 	mask = /obj/item/clothing/mask/gas/sechailer/half_mask
 	head = /obj/item/clothing/head/helmet/sf_peacekeeper/debranded
 	back = /obj/item/storage/backpack/industrial/frontier_colonist
-	r_pocket = /obj/item/lethal_gakster_patch
+	//r_pocket = /obj/item/lethal_gakster_patch
 
 /obj/effect/mob_spawn/corpse/human/gakstersuicide
 	name = "\improper Suicide Gakster Corpse"
@@ -29,7 +29,7 @@
 	belt = /obj/item/storage/belt/grenade
 	mask = /obj/item/clothing/mask/balaclava
 	head = /obj/item/clothing/head/utility/welding
-	r_pocket = /obj/item/lethal_gakster_patch
+	//r_pocket = /obj/item/lethal_gakster_patch
 
 /obj/effect/mob_spawn/corpse/human/filtremob
 	name = "\improper Blue Company Filtre Corpse"
@@ -46,7 +46,7 @@
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
 	head = /obj/item/clothing/head/helmet/sf_peacekeeper
 	back = /obj/item/storage/backpack/industrial/frontier_colonist/satchel
-	r_pocket = /obj/item/lethal_gakster_patch
+	//r_pocket = /obj/item/lethal_gakster_patch
 
 /obj/effect/mob_spawn/corpse/human/razor
 	name = "\improper Corpse of 178 Razor"
@@ -65,7 +65,7 @@
 	mask = /obj/item/clothing/mask/balaclava
 	head = /obj/item/clothing/head/helmet/lethal_kulon_helmet/spawns_with_shield
 	back = /obj/item/storage/backpack/industrial/frontier_colonist
-	r_pocket = /obj/item/lethal_gakster_patch
+	//r_pocket = /obj/item/lethal_gakster_patch
 
 /obj/effect/mob_spawn/corpse/human/fathomer
 	name = "\improper Corpse of 201 Fathomer"
@@ -84,7 +84,7 @@
 	mask = /obj/item/clothing/mask/balaclava
 	head = /obj/item/clothing/head/helmet/sf_sacrificial/spawns_with_shield
 	back = /obj/item/storage/backpack/industrial/frontier_colonist
-	r_pocket = /obj/item/lethal_gakster_patch
+	//r_pocket = /obj/item/lethal_gakster_patch
 
 /obj/effect/mob_spawn/corpse/human/chauchat
 	name = "\improper Corpse of 253 Chauchat"
@@ -104,7 +104,7 @@
 	head = /obj/item/clothing/head/helmet/lethal_kulon_helmet/spawns_with_shield
 	back = /obj/item/storage/backpack/industrial/frontier_colonist
 	glasses = /obj/item/clothing/glasses/night
-	r_pocket = /obj/item/lethal_gakster_patch
+	//r_pocket = /obj/item/lethal_gakster_patch
 
 /obj/effect/mob_spawn/corpse/human/prophet
 	name = "\improper Corpse of 287 Prophet"
@@ -125,4 +125,4 @@
 	back = /obj/item/storage/backpack/industrial/frontier_colonist/satchel
 	neck = /obj/item/clothing/neck/warrior_cape
 	glasses = /obj/item/clothing/glasses/night
-	r_pocket = /obj/item/lethal_gakster_patch
+	//r_pocket = /obj/item/lethal_gakster_patch
