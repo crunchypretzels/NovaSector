@@ -49,7 +49,7 @@
 	var/atom/movable/atom_parent = parent
 	if (isturf(atom_parent.loc))
 		// we're on the ground, so we should be decaying
-		var/turf/place = atom_parent
+		var/turf/place = atom_parent.loc
 		if (same_area) // check to make sure we're in an allowed area
 			if (!locate(get_area(place)) in spawn_areas)
 				stop_decay_timer()
