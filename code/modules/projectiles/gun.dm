@@ -76,6 +76,7 @@
 	light_system = OVERLAY_LIGHT
 	light_range = 0
 	light_color = COLOR_WHITE
+	light_on = 0
 
 	var/obj/effect/muzzle_flash/muzzle_flash
 	var/muzzle_flash_lum = 2 //muzzle flash brightness
