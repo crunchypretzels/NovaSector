@@ -310,7 +310,7 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 	playsound(trader, trader_data.sell_sound, 50, TRUE)
 	log_econ("[selling] has been sold to [trader] (typepath used for product info; [typepath_for_product_info]) by [customer] for [cost] cash.")
 	exchange_sold_items(selling, cost, typepath_for_product_info)
-	generate_cash(cost, customer)
+	spawn_lethal_money(cost, customer)
 	return TRUE
 
 /**
@@ -351,7 +351,7 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
  * * value - A number; The amount of cash that will be on the holochip
  * * customer - Reference to a mob; The mob we put the holochip in hands of
  */
-/datum/component/trader/proc/generate_cash(value, mob/customer)
+/datum/component/trader/proc/spawn_lethal_money(value, mob/customer)
 	var/obj/item/lethalcash/bundle/chip = new /obj/item/lethalcash/bundle(get_turf(customer), value) // LETHAL EDIT - allows traders to use our currency
 	customer.put_in_hands(chip)
 

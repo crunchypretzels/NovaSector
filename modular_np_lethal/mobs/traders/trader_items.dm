@@ -70,7 +70,7 @@
 	name = "Ol' Fishin Stand"
 	desc = "Auspiciously known as the Pentola's first restraunt venture, this stand sells hot dog and buys \
 	scavenged, shelf-stable food products."
-	icon = 'icons/obj/aquarium/fish.dmi'
+	icon = 'modular_np_lethal/mobs/traders/trader_icons.dmi'
 	icon_state = "catfish"
 	max_integrity = 2000
 
@@ -79,7 +79,7 @@
 /obj/structure/trader_sign/stalker
 	name = "Guns n' Ammo"
 	desc = "One of the more daring commercial ventures in the area, selling gear right in the raid."
-	icon = 'modular_nova/modules/modular_weapons/icons/obj/company_and_or_faction_based/carwo_defense_systems/guns32x.dmi'
+	icon = 'modular_np_lethal/mobs/traders/trader_icons.dmi'
 	icon_state = "sindano_evil"
 	max_integrity = 2000
 
@@ -117,6 +117,6 @@
 	desc = "Narcotics are one of humankind's earliest creations. With Pluto's functionally \
 	nonexistent law enforcement, shops like this thrive so long as they stay within the graces \
 	of the locals."
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = 'modular_np_lethal/mobs/traders/trader_icons.dmi'
 	icon_state = "pill"
 	max_integrity = 2000

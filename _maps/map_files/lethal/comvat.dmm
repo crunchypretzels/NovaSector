@@ -4936,13 +4936,6 @@
 /obj/effect/turf_decal/weather/snow/corner,
 /turf/open/floor/plating,
 /area/gakster_location/hideout_real)
-"Bg" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 8
-	},
-/turf/open/openspace,
-/area/gakster_location/hideout_real)
 "Bk" = (
 /obj/structure/table,
 /obj/effect/spawner/random/epic_loot/random_tools,
@@ -68483,7 +68476,7 @@ CQ
 CQ
 CQ
 FD
-Bg
+FO
 XS
 CQ
 CQ
