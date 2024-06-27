@@ -104,64 +104,6 @@
 	icon_state = pick(random_icon_states)
 	update_appearance()
 
-/*/obj/item/lethal_morale_patch_2
-	name = "morale patch"
-	desc = "These patches are usually affixed to garments, plate carriers, and bags, and represent their wearer's affiliations, tastes, and sense of memetic humor."
-	icon = 'modular_np_lethal/mobs/traders/trader_icons.dmi'
-	icon_state = "morale_patch_2"
-	w_class = WEIGHT_CLASS_TINY
-
-/obj/item/lethal_morale_patch_3
-	name = "morale patch"
-	desc = "These patches are usually affixed to garments, plate carriers, and bags, and represent their wearer's affiliations, tastes, and sense of memetic humor."
-	icon = 'modular_np_lethal/mobs/traders/trader_icons.dmi'
-	icon_state = "morale_patch_3"
-	w_class = WEIGHT_CLASS_TINY
-
-/obj/item/lethal_morale_patch_4
-	name = "morale patch"
-	desc = "These patches are usually affixed to garments, plate carriers, and bags, and represent their wearer's affiliations, tastes, and sense of memetic humor."
-	icon = 'modular_np_lethal/mobs/traders/trader_icons.dmi'
-	icon_state = "morale_patch_4"
-	w_class = WEIGHT_CLASS_TINY
-
-/obj/item/lethal_morale_patch_5
-	name = "morale patch"
-	desc = "These patches are usually affixed to garments, plate carriers, and bags, and represent their wearer's affiliations, tastes, and sense of memetic humor."
-	icon = 'modular_np_lethal/mobs/traders/trader_icons.dmi'
-	icon_state = "morale_patch_5"
-	w_class = WEIGHT_CLASS_TINY
-
-/obj/item/lethal_morale_patch_6
-	name = "morale patch"
-	desc = "These patches are usually affixed to garments, plate carriers, and bags, and represent their wearer's affiliations, tastes, and sense of memetic humor."
-	icon = 'modular_np_lethal/mobs/traders/trader_icons.dmi'
-	icon_state = "morale_patch_6"
-	w_class = WEIGHT_CLASS_TINY
-
-/obj/item/lethal_morale_patch_7
-	name = "morale patch"
-	desc = "These patches are usually affixed to garments, plate carriers, and bags, and represent their wearer's affiliations, tastes, and sense of memetic humor."
-	icon = 'modular_np_lethal/mobs/traders/trader_icons.dmi'
-	icon_state = "morale_patch_7"
-	w_class = WEIGHT_CLASS_TINY
-
-/obj/effect/spawner/random/lethal_morale_patch
-	name = "lethalstation morale patch spawner"
-	icon = 'modular_np_lethal/mobs/traders/trader_icons.dmi'
-	icon_state = "morale_patch_1"
-	spawn_loot_count = 1
-	spawn_loot_split = TRUE
-	loot = list(
-		/obj/item/lethal_morale_patch_1,
-		/obj/item/lethal_morale_patch_2,
-		/obj/item/lethal_morale_patch_3,
-		/obj/item/lethal_morale_patch_4,
-		/obj/item/lethal_morale_patch_5,
-		/obj/item/lethal_morale_patch_6,
-		/obj/item/lethal_morale_patch_7,
-	)
-*/
 //knives' stuff
 
 /obj/effect/mob_spawn/corpse/human/lethal_pusher
