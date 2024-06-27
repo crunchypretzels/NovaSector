@@ -13,7 +13,7 @@
 	name = "plasma globule"
 	icon = 'modular_nova/modules/modular_weapons/icons/obj/company_and_or_faction_based/szot_dynamica/ammo.dmi'
 	icon_state = "plasma_glob"
-	damage = 15
+	damage = 16
 	speed = 1.5
 	bare_wound_bonus = 55 // Lasers have a wound bonus of 40, this is a bit higher
 	pass_flags = PASSTABLE | PASSGRILLE // His ass does NOT pass through glass!

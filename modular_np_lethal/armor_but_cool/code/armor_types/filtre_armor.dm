@@ -9,8 +9,8 @@
 	wound = WOUND_ARMOR_HIGH
 
 /datum/armor/armor_lethal_filtre_super
-	melee = ARMOR_LEVEL_MID + 25
-	bullet = BULLET_ARMOR_IV
+	melee = ARMOR_LEVEL_MID + 50
+	bullet = BULLET_ARMOR_IV + 50
 	laser = ARMOR_LEVEL_MID
 	energy = ARMOR_LEVEL_WEAK
 	bomb = ARMOR_LEVEL_MID
@@ -82,7 +82,7 @@
 	icon_state = "filtre_heavy"
 	armor_type = /datum/armor/armor_lethal_filtre_super
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	slowdown = 1.2
+	slowdown = 2.2
 	max_integrity = 800
 	limb_integrity = 500
 

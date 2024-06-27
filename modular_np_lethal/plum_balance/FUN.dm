@@ -30,3 +30,10 @@
 /obj/item/melee/implantarmblade
 	armour_penetration = 30
 
+
+/obj/item/wrench/combat
+force = 25 // arent you tired of being nice
+
+/obj/item/katana
+force = 69 // hurt people hurt people
+block_chance = 10 //just dont get hit
