@@ -34,7 +34,7 @@
 		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
 			H.put_in_hands(bundle)
-		to_chat(user, ("You add [value] credits worth of money to the bundles.<br>It holds [bundle.value] credits now."))
+		to_chat(user, ("You add [value] credits worth of money to the bundle. <br>It holds [bundle.value] credits now."))
 		qdel(src)
 
 
@@ -94,15 +94,11 @@
 
 	if(!value)
 		qdel(src)
-	if(amount in list(1000,500,200,100,50,20,10,5,1))
-		var/cashtype = text2path("/obj/item/lethalcash/bundle/c[amount]")
-		var/obj/cash = new cashtype (usr.loc)
-		usr.put_in_hands(cash)
-	else
-		var/obj/item/lethalcash/bundle/bundle = new (usr.loc)
-		bundle.value = amount
-		bundle.update_icon()
-		usr.put_in_hands(bundle)
+
+	var/obj/item/lethalcash/bundle/bundle = new (usr.loc)
+	bundle.value = amount
+	bundle.update_icon()
+	usr.put_in_hands(bundle)
 
 	src.value -= amount
 	src.update_icon()
@@ -160,17 +156,12 @@
 
 
 /proc/spawn_lethal_money(sum, spawnloc, mob/living/carbon/human/H) //there's a little weirdness with the way it generates single bills but this works pretty good
-	if(sum in list(1000,500,200,100,50,20,10,5,1))
-		var/cashtype = text2path("/obj/item/lethalcash/bundle/c[sum]")
-		var/obj/cash = new cashtype (spawnloc)
-		usr.put_in_hands(cash)
-	else
-		var/obj/item/lethalcash/bundle/fundle = new (spawnloc)
-		fundle.value = sum
-		fundle.update_icon()
-		usr.put_in_hands(fundle)
-		if(istype(H) && !H.get_active_hand())
-			H.put_in_hands(fundle)
+	var/obj/item/lethalcash/bundle/fundle = new (spawnloc)
+	fundle.value = sum
+	fundle.update_icon()
+	usr.put_in_hands(fundle)
+	if(istype(H) && !H.get_active_hand())
+		H.put_in_hands(fundle)
 
 /obj/item/lethalcash/bundle/proc/spend(amount, pay_anyway = FALSE)
 	if(value >= amount)

@@ -15,12 +15,12 @@
 	)
 
 	initial_wanteds = list(
-		/*/obj/item/food/sausage = list(PAYCHECK_CREW * 0.1, INFINITY, "per sausage"),
+		/obj/item/food/sausage = list(PAYCHECK_CREW * 0.1, INFINITY, "per sausage"),
 		/obj/item/food/ready_donk = list(PAYCHECK_CREW * 0.2, INFINITY, "per box"),
 		/obj/item/food/ready_donk/donkhiladas = list(PAYCHECK_CREW * 0.2, INFINITY, "per box"),
 		/obj/item/food/ready_donk/donkrange_chicken = list(PAYCHECK_CREW * 0.2, INFINITY, "per box"),
 		/obj/item/food/ready_donk/mac_n_cheese = list(PAYCHECK_CREW * 0.2, INFINITY, "per box"),
-		/obj/item/food/ready_donk/nachos_grandes= list(PAYCHECK_CREW * 0.3, INFINITY, "per box"),*/
+		/obj/item/food/ready_donk/nachos_grandes= list(PAYCHECK_CREW * 0.3, INFINITY, "per box"),
 	)
 
 	say_phrases = list(

@@ -351,8 +351,8 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
  * * value - A number; The amount of cash that will be on the holochip
  * * customer - Reference to a mob; The mob we put the holochip in hands of
  */
-/datum/component/trader/proc/spawn_lethal_money(value, mob/customer)
-	var/obj/item/lethalcash/bundle/chip = new /obj/item/lethalcash/bundle(get_turf(customer), value) // LETHAL EDIT - allows traders to use our currency
+/datum/component/trader/proc/generate_cash(value, mob/customer)
+	var/obj/item/holochip/chip = new /obj/item/holochip(get_turf(customer), value) // LETHAL EDIT - allows traders to use our currency
 	customer.put_in_hands(chip)
 
 ///Talk about what items are being sold/wanted by the trader and in what quantity or lore
