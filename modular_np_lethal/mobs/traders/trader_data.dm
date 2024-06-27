@@ -100,13 +100,13 @@
 	)
 
 	initial_wanteds = list(
-		/*/obj/item/fish/lanternfish = list(PAYCHECK_CREW * 2, 10, "per fish"),
+		/obj/item/fish/lanternfish = list(PAYCHECK_CREW * 2, 10, "per fish"),
 		/obj/item/fish/chasm_crab = list(PAYCHECK_CREW * 2, 10, "per fish"),
 		/obj/item/fish/donkfish = list(PAYCHECK_CREW * 2.5, 10, "per fish"),
 		/obj/item/fish/ratfish = list(PAYCHECK_CREW * 0.7, 10, "per fish"),
 		/obj/item/fish/slimefish = list(PAYCHECK_CREW * 1.2, 10, "per fish"),
 		/obj/item/fish/zipzap = list(PAYCHECK_CREW * 1.7, 10, "per fish"),
-		/obj/item/fish/clownfish/lube = list(PAYCHECK_CREW * 2, 10, "per fish"),*/
+		/obj/item/fish/clownfish/lube = list(PAYCHECK_CREW * 2, 10, "per fish"),
 	)
 
 	say_phrases = list(
@@ -226,7 +226,7 @@
 	)
 
 	initial_wanteds = list(
-		//obj/item/lethal_gakster_patch = list(PAYCHECK_COMMAND, INFINITY, "each"),
+		/obj/item/lethal_morale_patch = list(PAYCHECK_COMMAND, INFINITY, "each"),
 	)
 
 	say_phrases = list(
@@ -323,9 +323,9 @@
 	)
 
 	initial_wanteds = list(
-		/*/obj/item/storage/epic_loot_medical_case = list(PAYCHECK_COMMAND * 2, INFINITY),
+		/obj/item/storage/epic_loot_medical_case = list(PAYCHECK_COMMAND * 2, INFINITY),
 		/obj/item/defibrillator = list(PAYCHECK_COMMAND * 4, INFINITY),
-		/obj/item/epic_loot/military_flash = list(PAYCHECK_COMMAND * 3, INFINITY),*/
+		/obj/item/epic_loot/military_flash = list(PAYCHECK_COMMAND * 3, INFINITY),
 	)
 
 	say_phrases = list(
