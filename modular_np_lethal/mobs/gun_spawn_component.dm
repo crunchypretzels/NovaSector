@@ -42,8 +42,11 @@
 /datum/component/spawn_scavenger/proc/do_examine(obj/item/source, mob/examiner, list/examine_list)
 	SIGNAL_HANDLER
 
-	examine_list += "<br>You get the impression that this thing <b>may draw in nearby scavengers</b> if left <i>on the floor or unattended.</i></br>"
+	examine_list += "<br>You get the impression that this thing <b>may draw in nearby scavengers</b> if left <i>on the floor or unattended.</i>"
+	if(check_decay())
+		examine_list += "<b>However, upon further reflection, it probably won't draw loose scavengers here.</b>"
 
+/// Checks if this item is valid for decay/scav spawning. Returns TRUE (and starts the timer) if it can, returns FALSE (and ends the timer) if it can't.
 /datum/component/spawn_scavenger/proc/check_decay()
 	SIGNAL_HANDLER
 	var/atom/movable/atom_parent = parent
@@ -53,10 +56,12 @@
 		if (same_area) // check to make sure we're in an allowed area
 			if (!locate(get_area(place)) in spawn_areas)
 				stop_decay_timer()
-				return
+				return FALSE
 		start_decay_timer()
+		return TRUE
 	else
 		stop_decay_timer()
+		return FALSE
 
 /datum/component/spawn_scavenger/proc/start_decay_timer()
 	// starts the timer or resets it if it's running
