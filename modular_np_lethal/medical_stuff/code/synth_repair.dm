@@ -1,4 +1,4 @@
-/obj/item/stack/medical/wound_recovery/robofoam_super/afterattack(obj/item/clothing/target, mob/user, proximity_flag, click_parameters)
+/obj/item/stack/medical/wound_recovery/robofoam_super/interact_with_atom(obj/item/clothing/target, mob/user, proximity_flag, click_parameters)
 	. = ..()
 	if(!proximity_flag || !istype(target))
 		return FALSE
