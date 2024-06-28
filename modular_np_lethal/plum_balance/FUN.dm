@@ -32,8 +32,9 @@
 
 
 /obj/item/wrench/combat
-force = 25 // arent you tired of being nice
+	force = 25 // arent you tired of being nice
 
 /obj/item/katana
-force = 69 // hurt people hurt people
-block_chance = 10 //just dont get hit
+	force = 69 // hurt people hurt people
+	block_chance = 10 //just dont get hit
+
