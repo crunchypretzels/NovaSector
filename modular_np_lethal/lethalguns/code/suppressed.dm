@@ -90,6 +90,11 @@
 	/// The stored under-barrel grenade launcher for this weapon
 	var/obj/item/gun/ballistic/revolver/grenadelauncher/tydhouer/underbarrel
 
+/obj/item/gun/ballistic/automatic/suppressed_rifle/grenade_launcher/try_fire_gun(atom/target, mob/living/user, params)
+	if(LAZYACCESS(params2list(params), RIGHT_CLICK))
+		return underbarrel.try_fire_gun(target, user, params)
+	return ..()
+
 /obj/item/gun/ballistic/automatic/suppressed_rifle/grenade_launcher/Initialize(mapload)
 	. = ..()
 	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/tydhouer(src)
