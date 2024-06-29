@@ -12,7 +12,7 @@
 /obj/item/gun/proc/muzzle_flash(firing_angle, atom/movable/flash_loc)
 	if(!muzzle_flash || muzzle_flash.applied || !muzzle_effects)
 		return
-	var/prev_light = light_range
+	var/prev_light = 0
 	if(light_range <= muzzle_flash_lum)
 		set_light_range(muzzle_flash_lum)
 		set_light_color(muzzle_flash_color)
