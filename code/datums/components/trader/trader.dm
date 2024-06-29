@@ -310,7 +310,7 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 	playsound(trader, trader_data.sell_sound, 50, TRUE)
 	log_econ("[selling] has been sold to [trader] (typepath used for product info; [typepath_for_product_info]) by [customer] for [cost] cash.")
 	exchange_sold_items(selling, cost, typepath_for_product_info)
-	spawn_lethal_money(cost, customer)
+	spawn_lethal_money(cost, customer) //LETHAL EDIT
 	return TRUE
 
 /**
