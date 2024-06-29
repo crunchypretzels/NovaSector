@@ -112,7 +112,7 @@
 	hairstyle = "Emo"
 	haircolor = "#49003f"
 	facial_hairstyle = "Shaved"
-	mob_name = ""
+	mob_name = "43 Knives"
 
 /datum/outfit/lethal_pusher
 	name = "\improper Corpse of 43 Knives"
