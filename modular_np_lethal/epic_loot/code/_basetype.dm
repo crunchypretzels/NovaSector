@@ -6,7 +6,7 @@
 	layer = BELOW_OBJ_LAYER
 	obj_flags = CAN_BE_HIT
 	pass_flags_self = LETPASSTHROW|LETPASSCLICKS
-	max_integrity = 100
+	max_integrity = 200
 
 	/// What storage datum we use
 	var/storage_datum_to_use = /datum/storage/maintenance_loot_structure

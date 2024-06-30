@@ -181,6 +181,10 @@
 /obj/machinery/light/small/red/dim/directional/west,
 /turf/open/floor/catwalk_floor/titanium,
 /area/gakster_location/hideout_real)
+"ba" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/iron/smooth,
+/area/gakster_location/war)
 "bb" = (
 /obj/structure/fluff/metalpole{
 	dir = 4
@@ -7450,6 +7454,10 @@
 /obj/machinery/light/cold/dim/directional/east,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
+"OE" = (
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/closed/indestructible/titanium/nodiagonal,
+/area/gakster_location/filtre_spawn)
 "OF" = (
 /obj/structure/table,
 /obj/machinery/light/dim/directional/west,
@@ -8949,6 +8957,11 @@
 /obj/machinery/light/cold/dim/directional/east,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
+"WV" = (
+/obj/machinery/vending/wallmed/epic_loot/directional/south,
+/obj/structure/reagent_dispensers/water_cooler/directional/east,
+/turf/open/indestructible/stone,
+/area/gakster_location/hideout_real)
 "WW" = (
 /obj/machinery/barsign/all_access,
 /turf/closed/indestructible/wood,
@@ -35371,7 +35384,7 @@ NT
 jI
 dK
 NT
-Lh
+ba
 Lh
 lv
 NT
@@ -52762,7 +52775,7 @@ ca
 lj
 yY
 lj
-oA
+WV
 KC
 yY
 Kk
@@ -53622,7 +53635,7 @@ Vi
 vn
 vn
 vn
-vn
+OE
 wg
 wg
 vn
