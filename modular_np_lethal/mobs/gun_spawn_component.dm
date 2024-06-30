@@ -42,8 +42,12 @@
 /datum/component/spawn_scavenger/proc/do_examine(obj/item/source, mob/examiner, list/examine_list)
 	SIGNAL_HANDLER
 
-	examine_list += "<br>You get the impression that this thing <b>may draw in nearby scavengers</b> if left <i>on the floor or unattended.</i></br>"
+	examine_list += "<br>You get the impression that this thing <b>may draw in nearby scavengers</b> if left <i>on the floor or unattended.</i>"
+	if(!check_decay())
+		examine_list += "<b>However, upon further reflection, it probably won't draw loose scavengers here.</b>"
+	examine_list += ""
 
+/// Checks if this item is valid for decay/scav spawning. Returns TRUE (and starts the timer) if it can, returns FALSE (and ends the timer) if it can't.
 /datum/component/spawn_scavenger/proc/check_decay()
 	SIGNAL_HANDLER
 	var/atom/movable/atom_parent = parent
@@ -53,10 +57,12 @@
 		if (same_area) // check to make sure we're in an allowed area
 			if (!locate(get_area(place)) in spawn_areas)
 				stop_decay_timer()
-				return
+				return FALSE
 		start_decay_timer()
+		return TRUE
 	else
 		stop_decay_timer()
+		return FALSE
 
 /datum/component/spawn_scavenger/proc/start_decay_timer()
 	// starts the timer or resets it if it's running
@@ -89,7 +95,7 @@
 		if (spawnloc)
 			var/mob/living/new_scav = new scavenger(spawnloc)
 			spawned_ref = WEAKREF(new_scav)
-			message_admins("[parent] has summoned a scavenger after being left unattended. [ADMIN_LOOKUPFLW(new_scav)]")
+			message_admins("[parent] has summoned a scavenger after being left unattended at [ADMIN_COORDJMP(atom_parent)]. [ADMIN_LOOKUPFLW(new_scav)]")
 
 			if (delete_object)
 				qdel(parent)
@@ -97,6 +103,7 @@
 				return
 			else
 				atom_parent.moveToNullspace() // safely tuck it away into nullspace
+				new_scav.desc += "<br><br>[parent] is loosely strapped to their body. You could probably steal it back through lethal force." // notify examiners
 				RegisterSignal(new_scav, COMSIG_LIVING_DEATH, PROC_REF(drop_loot)) // and register the signal to drop it when it dies
 				stop_decay_timer()
 		else
@@ -115,10 +122,10 @@
 
 	var/atom/movable/atom_parent = parent // we should only be dropping from nullspace, so
 	var/mob/living/our_scav = spawned_ref.resolve()
-	if (our_scav)
-		atom_parent.Move(get_turf(our_scav))
-		UnregisterSignal(our_scav, COMSIG_LIVING_DEATH)
-		cleanup()
+	var/turf/scav_turf = get_turf(our_scav)
+	atom_parent.forceMove(scav_turf)
+	UnregisterSignal(our_scav, COMSIG_LIVING_DEATH) // not sure if this is necessary since the scav mob is deleted to spawn the corpse
+	cleanup()
 
 // Horrible copy-paste of get_safe_random_turf except updated to check for deepmaints exists and players
 
