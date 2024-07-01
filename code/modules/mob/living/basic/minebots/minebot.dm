@@ -215,10 +215,10 @@
 	balloon_alert(user, "now [combat_mode ? "attacking wildlife" : "collecting loose ore"]")
 	return CLICK_ACTION_SUCCESS
 
-/mob/living/basic/mining_drone/RangedAttack(atom/target, list/modifiers)
+/mob/living/basic/mining_drone/RangedAttack(atom/target)
 	if(!combat_mode)
 		return
-	stored_gun.try_fire_gun(target, src, list2params(modifiers))
+	stored_gun.afterattack(target, src)
 
 /mob/living/basic/mining_drone/UnarmedAttack(atom/attack_target, proximity_flag, list/modifiers)
 	. = ..()

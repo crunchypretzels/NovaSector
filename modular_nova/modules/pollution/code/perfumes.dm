@@ -48,10 +48,11 @@
 		to_chat(user, span_notice("The cap on [src] is now [cap ? "on" : "off"]."))
 		update_appearance()
 
-/obj/item/perfume/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
+/obj/item/perfume/afterattack(atom/attacked, mob/user, proximity)
+	. = ..()
 	if(.)
 		return
-	if(!ismovable(interacting_with))
+	if(!ismovable(attacked))
 		return
 	if(has_cap && cap)
 		to_chat(user, span_warning("Take the cap off first!"))
@@ -62,10 +63,10 @@
 	uses_remaining--
 	var/turf/my_turf = get_turf(user)
 	my_turf.pollute_turf(fragrance_type, 20)
-	user.visible_message(span_notice("[user] sprays [interacting_with] with \the [src]."), span_notice("You spray [interacting_with] with \the [src]."))
+	user.visible_message(span_notice("[user] sprays [attacked] with \the [src]."), span_notice("You spray [attacked] with \the [src]."))
 	user.changeNext_move(CLICK_CD_RANGE*2)
 	playsound(my_turf, 'sound/effects/spray2.ogg', 50, TRUE, -6)
-	interacting_with.AddComponent(/datum/component/temporary_pollution_emission, fragrance_type, 5, 10 MINUTES)
+	attacked.AddComponent(/datum/component/temporary_pollution_emission, fragrance_type, 5, 10 MINUTES)
 
 /obj/item/perfume/cologne
 	name = "cologne bottle"

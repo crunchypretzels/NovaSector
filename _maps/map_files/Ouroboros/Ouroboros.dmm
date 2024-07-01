@@ -6482,7 +6482,6 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/structure/cable,
-/obj/effect/landmark/start/telecomms_specialist,
 /turf/open/floor/wood/large,
 /area/station/tcommsat/computer)
 "bVN" = (
@@ -15096,8 +15095,8 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "erZ" = (
+/obj/machinery/vending/imported,
 /obj/machinery/light/warm/directional/north,
-/obj/machinery/vending/imported/nt,
 /turf/open/floor/iron/white/herringbone,
 /area/station/medical/patients_rooms)
 "esc" = (
@@ -20091,13 +20090,13 @@
 /turf/open/floor/catwalk_floor,
 /area/station/cargo/bitrunning/den)
 "fSn" = (
+/obj/machinery/vending/imported,
 /obj/effect/turf_decal/tile/bar/fourcorners,
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/vending/imported/nt,
 /turf/open/floor/iron/checker,
 /area/station/service/kitchen/diner)
 "fSB" = (
@@ -27700,7 +27699,6 @@
 	},
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
-/obj/structure/sign/poster/timeclock_psa/directional/west,
 /turf/open/floor/iron/dark/corner{
 	dir = 8
 	},
@@ -27802,7 +27800,7 @@
 /obj/effect/turf_decal/box,
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/light/cold/directional/north,
-/obj/structure/sign/poster/timeclock_psa/directional/north,
+/obj/machinery/airalarm/directional/north,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/common/cryopods)
 "ier" = (
@@ -28277,7 +28275,6 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
-/obj/effect/landmark/start/telecomms_specialist,
 /turf/open/floor/iron/edge{
 	dir = 1
 	},
@@ -29111,7 +29108,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/bot,
-/obj/machinery/airalarm/directional/south,
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/iron/dark/small,
 /area/station/common/cryopods)
 "ixC" = (
@@ -32840,7 +32837,7 @@
 /area/station/medical/medbay/central)
 "jAS" = (
 /obj/effect/turf_decal/bot,
-/obj/machinery/flatpacker,
+/obj/machinery/photocopier,
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
 "jAT" = (
@@ -34840,10 +34837,10 @@
 /turf/open/floor/iron/dark/small,
 /area/station/ai_monitored/turret_protected/aisat/maint)
 "kfq" = (
+/obj/machinery/vending/imported,
 /obj/effect/turf_decal/bot_white,
 /obj/machinery/airalarm/directional/west,
 /obj/machinery/light/warm/directional/west,
-/obj/machinery/vending/imported/nt,
 /turf/open/floor/iron/dark/small,
 /area/station/command/meeting_room/council)
 "kft" = (
@@ -35192,12 +35189,12 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
+/obj/effect/turf_decal/lunar_sand/plating,
 /obj/effect/turf_decal/box,
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
-/obj/effect/turf_decal/lunar_sand/plating,
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/station/asteroid)
 "kjK" = (
 /turf/closed/wall,
@@ -37570,7 +37567,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
-/turf/open/floor/iron/checker,
+/turf/open/floor/iron/dark,
 /area/station/hallway/primary/central/aft)
 "kQK" = (
 /obj/structure/railing{
@@ -41896,7 +41893,6 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/structure/cable,
-/obj/effect/landmark/start/telecomms_specialist,
 /turf/open/floor/wood/large,
 /area/station/tcommsat/computer)
 "mbl" = (
@@ -46037,7 +46033,12 @@
 	},
 /obj/structure/rack/shelf,
 /obj/machinery/light/cold/directional/north,
-/obj/effect/spawner/random/armory/dragnet,
+/obj/item/gun/energy/e_gun/dragnet{
+	pixel_y = 4
+	},
+/obj/item/gun/energy/e_gun/dragnet{
+	pixel_y = -4
+	},
 /turf/open/floor/engine,
 /area/station/ai_monitored/security/armory)
 "njJ" = (

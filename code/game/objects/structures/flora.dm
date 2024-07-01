@@ -293,9 +293,6 @@
 	delete_on_harvest = TRUE
 	flora_flags = FLORA_HERBAL | FLORA_WOODEN
 
-/obj/structure/flora/tree/add_debris_element()
-	AddElement(/datum/element/debris, DEBRIS_WOOD, -10, 5)
-
 /obj/structure/flora/tree/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/seethrough, get_seethrough_map())

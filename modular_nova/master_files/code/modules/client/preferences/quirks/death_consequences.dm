@@ -29,20 +29,11 @@
 /datum/preference/numeric/death_consequences/living_degradation_recovery_per_second
 	savefile_key = "dc_living_degradation_recovery_per_second"
 
-	minimum = 0
+	minimum = -100 // if you want, you can just die slowly
 	maximum = 1000
 
 /datum/preference/numeric/death_consequences/living_degradation_recovery_per_second/create_default_value()
 	return DEATH_CONSEQUENCES_DEFAULT_LIVING_DEGRADATION_RECOVERY
-
-/datum/preference/numeric/death_consequences/living_degradation_per_second
-	savefile_key = "dc_living_degradation_per_second"
-
-	minimum = 0
-	maximum = 1000
-
-/datum/preference/numeric/death_consequences/living_degradation_per_second/create_default_value()
-	return 0
 
 /datum/preference/numeric/death_consequences/dead_degradation_per_second
 	savefile_key = "dc_dead_degradation_per_second"

@@ -462,7 +462,7 @@
 	return
 
 /obj/item/seeds/attackby(obj/item/O, mob/user, params)
-	if(IS_WRITING_UTENSIL(O))
+	if(istype(O, /obj/item/pen))
 		var/choice = tgui_input_list(usr, "What would you like to change?", "Seed Alteration", list("Plant Name", "Seed Description", "Product Description"))
 		if(isnull(choice))
 			return

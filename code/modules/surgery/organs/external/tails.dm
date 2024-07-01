@@ -23,11 +23,10 @@
 /obj/item/organ/external/tail/Insert(mob/living/carbon/receiver, special, movement_flags)
 	. = ..()
 	if(.)
+		original_owner ||= WEAKREF(receiver)
+
 		receiver.clear_mood_event("tail_lost")
 		receiver.clear_mood_event("tail_balance_lost")
-
-	if(!special) // if some admin wants to give someone tail moodles for tail shenanigans, they can spawn it and do it by hand
-		original_owner ||= WEAKREF(receiver)
 
 		// If it's your tail, an infinite debuff is replaced with a timed one
 		// If it's not your tail but of same species, I guess it works, but we are more sad
@@ -152,7 +151,7 @@
 
 // NOVA EDIT ADDITION - CUSTOMIZATION
 /datum/bodypart_overlay/mutant/tail/get_global_feature_list()
-	return SSaccessories.sprite_accessories["tail"]
+	return GLOB.sprite_accessories["tail"]
 // NOVA EDIT ADDITION END
 
 /datum/bodypart_overlay/mutant/tail/can_draw_on_bodypart(mob/living/carbon/human/human)
@@ -169,10 +168,10 @@
 	wag_flags = WAG_ABLE
 
 /datum/bodypart_overlay/mutant/tail/get_global_feature_list()
-	return SSaccessories.sprite_accessories["tail"] // NOVA EDIT CHANGE - ORIGINAL: return SSaccessories.tails_list_human
+	return GLOB.sprite_accessories["tail"] // NOVA EDIT CHANGE - ORIGINAL: return GLOB.tails_list_human
 
 /obj/item/organ/external/tail/cat/get_butt_sprite()
-	return icon('icons/mob/butts.dmi', BUTT_SPRITE_CAT)
+	return BUTT_SPRITE_CAT
 
 ///Cat tail bodypart overlay
 /datum/bodypart_overlay/mutant/tail/cat
@@ -193,7 +192,7 @@
 	feature_key = "tail" // NOVA EDIT - Customization - ORIGINAL: feature_key = "tail_monkey"
 
 /datum/bodypart_overlay/mutant/tail/monkey/get_global_feature_list()
-	return SSaccessories.tails_list_monkey
+	return GLOB.tails_list_monkey
 
 /obj/item/organ/external/tail/lizard
 	name = "lizard tail"
@@ -210,7 +209,7 @@
 	feature_key = "tail" // NOVA EDIT - Customization - ORIGINAL: feature_key = "tail_lizard"
 
 /datum/bodypart_overlay/mutant/tail/lizard/get_global_feature_list()
-	return SSaccessories.sprite_accessories["tail"] // NOVA EDIT - Customization - ORIGINAL: return SSaccessories.tails_list_lizard
+	return GLOB.sprite_accessories["tail"] // NOVA EDIT - Customization - ORIGINAL: return GLOB.tails_list_lizard
 
 /obj/item/organ/external/tail/lizard/fake
 	name = "fabricated lizard tail"
@@ -226,7 +225,7 @@
 	var/tail_spine_key = NONE
 
 /datum/bodypart_overlay/mutant/tail_spines/get_global_feature_list()
-	return SSaccessories.sprite_accessories["tailspines"] // NOVA EDIT CHANGE - ORIGINAL: return SSaccessories.tail_spines_list
+	return GLOB.sprite_accessories["tailspines"] // NOVA EDIT CHANGE - ORIGINAL: return GLOB.tail_spines_list
 
 /datum/bodypart_overlay/mutant/tail_spines/get_base_icon_state()
 	return (!isnull(tail_spine_key) ? "[tail_spine_key]_" : "") + (wagging ? "wagging_" : "") + sprite_datum.icon_state // Select the wagging state if appropriate

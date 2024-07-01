@@ -22,9 +22,6 @@
 	bolt_type = BOLT_TYPE_NO_BOLT
 	click_on_low_ammo = FALSE
 	must_hold_to_load = TRUE
-
-	muzzle_effects = FALSE
-
 	/// whether the bow is drawn back
 	var/drawn = FALSE
 
@@ -66,13 +63,14 @@
 	playsound(src, 'sound/weapons/gun/bow/bow_draw.ogg', 25, TRUE)
 	update_appearance()
 
-/obj/item/gun/ballistic/bow/try_fire_gun(atom/target, mob/living/user, params)
+/obj/item/gun/ballistic/bow/afterattack(atom/target, mob/living/user, flag, params, passthrough = FALSE)
+	. |= AFTERATTACK_PROCESSED_ITEM
 	if(!chambered)
-		return FALSE
+		return
 	if(!drawn)
 		to_chat(user, span_warning("Without drawing the bow, the arrow uselessly falls to the ground."))
 		drop_arrow()
-		return FALSE
+		return
 	return ..() //fires, removing the arrow
 
 /obj/item/gun/ballistic/bow/equipped(mob/user, slot, initial)

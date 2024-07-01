@@ -21,6 +21,7 @@
 		/mob/living/simple_animal/bot/secbot/grievous,
 		/mob/living/simple_animal/bot/secbot/grievous/toy,
 		/mob/living/simple_animal/bot/secbot/pingsky,
+		/mob/living/simple_animal/bot/vibebot,
 		/mob/living/simple_animal/hostile,
 		/mob/living/simple_animal/hostile/asteroid,
 		/mob/living/simple_animal/hostile/asteroid/curseblob,

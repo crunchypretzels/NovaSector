@@ -54,10 +54,11 @@
 	name =".60 Strela bullet"
 	icon_state = "gaussphase"
 	speed = 0.4
-	damage = 100 //lol
-	armour_penetration = 100 //i dont care anymore. that filtre is taking damage.
+	damage = 50
+	armour_penetration = 50
+	wound_bonus = 20
 	bare_wound_bonus = 30
-	demolition_mod = 30
+	demolition_mod = 1.8
 	/// How much damage we add to things that are weak to this bullet
 	var/anti_materiel_damage_addition = 30
 	/// What biotype we look for

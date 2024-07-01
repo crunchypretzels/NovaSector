@@ -125,18 +125,21 @@ RSF
 		return FALSE
 	return TRUE
 
-/obj/item/rsf/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
+/obj/item/rsf/afterattack(atom/A, mob/user, proximity)
 	if(cooldown > world.time)
-		return NONE
-	if (!is_allowed(interacting_with))
-		return NONE
+		return
+	. = ..()
+	if(!proximity)
+		return .
+	. |= AFTERATTACK_PROCESSED_ITEM
+	if (!is_allowed(A))
+		return .
 	if(use_matter(dispense_cost, user))//If we can charge that amount of charge, we do so and return true
 		playsound(loc, 'sound/machines/click.ogg', 10, TRUE)
-		var/atom/meme = new to_dispense(get_turf(interacting_with))
+		var/atom/meme = new to_dispense(get_turf(A))
 		to_chat(user, span_notice("[action_type] [meme.name]..."))
 		cooldown = world.time + cooldowndelay
-		return ITEM_INTERACT_SUCCESS
-	return ITEM_INTERACT_BLOCKING
+	return .
 
 ///A helper proc. checks to see if we can afford the amount of charge that is passed, and if we can docs the charge from our base, and returns TRUE. If we can't we return FALSE
 /obj/item/rsf/proc/use_matter(charge, mob/user)
@@ -160,7 +163,10 @@ RSF
 
 ///Helper proc that iterates through all the things we are allowed to spawn on, and sees if the passed atom is one of them
 /obj/item/rsf/proc/is_allowed(atom/to_check)
-	return is_type_in_list(to_check, allowed_surfaces)
+	for(var/sort in allowed_surfaces)
+		if(istype(to_check, sort))
+			return TRUE
+	return FALSE
 
 /obj/item/rsf/cookiesynth
 	name = "Cookie Synthesizer"

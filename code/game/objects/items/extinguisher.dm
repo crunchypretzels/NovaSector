@@ -32,11 +32,7 @@
 	/// Can we refill this at a water tank?
 	var/refilling = FALSE
 	/// What tank we need to refill this.
-	var/tanktypes = list(
-		/obj/structure/reagent_dispensers/watertank,
-		/obj/structure/reagent_dispensers/plumbed,
-		/obj/structure/reagent_dispensers/water_cooler,
-	)
+	var/tanktype = /obj/structure/reagent_dispensers/watertank
 	/// something that should be replaced with base_icon_state
 	var/sprite_name = "fire_extinguisher"
 	/// Maximum distance launched water will travel.
@@ -135,10 +131,7 @@
 	tank_holder_icon_state = "holder_foam_extinguisher"
 	dog_fashion = null
 	chem = /datum/reagent/firefighting_foam
-	tanktypes = list(
-		/obj/structure/reagent_dispensers/foamtank,
-		/obj/structure/reagent_dispensers/plumbed,
-	)
+	tanktype = /obj/structure/reagent_dispensers/foamtank
 	sprite_name = "foam_extinguisher"
 	precision = TRUE
 	max_water = 100
@@ -149,7 +142,7 @@
 /obj/item/extinguisher/suicide_act(mob/living/carbon/user)
 	if (!safety && (reagents.total_volume >= 1))
 		user.visible_message(span_suicide("[user] puts the nozzle to [user.p_their()] mouth. It looks like [user.p_theyre()] trying to extinguish the spark of life!"))
-		interact_with_atom(user, user)
+		afterattack(user,user)
 		return OXYLOSS
 	else if (safety && (reagents.total_volume >= 1))
 		user.visible_message(span_warning("[user] puts the nozzle to [user.p_their()] mouth... The safety's still on!"))
@@ -185,13 +178,9 @@
 		. += span_notice("Alt-click to empty it.")
 
 /obj/item/extinguisher/proc/AttemptRefill(atom/target, mob/user)
-	if(is_type_in_list(target, tanktypes) && target.Adjacent(user))
+	if(istype(target, tanktype) && target.Adjacent(user))
 		if(reagents.total_volume == reagents.maximum_volume)
 			balloon_alert(user, "already full!")
-			return TRUE
-		// Make sure we're refilling with the proper chem.
-		if(!(target.reagents.has_reagent(chem)))
-			balloon_alert(user, "can't refill with this liquid!")
 			return TRUE
 		var/obj/structure/reagent_dispensers/W = target //will it work?
 		var/transferred = W.reagents.trans_to(src, max_water, transferred_by = user)
@@ -207,65 +196,67 @@
 	else
 		return FALSE
 
-/obj/item/extinguisher/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
-	return interact_with_atom(interacting_with, user, modifiers)
+/obj/item/extinguisher/afterattack(atom/target, mob/user , flag)
+	. = ..()
+	// Make it so the extinguisher doesn't spray yourself when you click your inventory items
+	if (target.loc == user)
+		return
 
-/obj/item/extinguisher/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
-	if (interacting_with.loc == user)
-		return NONE
+	. |= AFTERATTACK_PROCESSED_ITEM
 
 	if(refilling)
 		refilling = FALSE
-		return NONE
-	if(safety)
-		return NONE
-
-	if (src.reagents.total_volume < 1)
-		balloon_alert(user, "it's empty!")
 		return .
+	if (!safety)
 
-	if (world.time < src.last_use + 12)
-		return .
 
-	src.last_use = world.time
+		if (src.reagents.total_volume < 1)
+			balloon_alert(user, "it's empty!")
+			return .
 
-	playsound(src.loc, 'sound/effects/extinguish.ogg', 75, TRUE, -3)
+		if (world.time < src.last_use + 12)
+			return .
 
-	var/direction = get_dir(src,interacting_with)
+		src.last_use = world.time
 
-	if(user.buckled && isobj(user.buckled) && !user.buckled.anchored)
-		var/obj/B = user.buckled
-		var/movementdirection = REVERSE_DIR(direction)
-		addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/item/extinguisher, move_chair), B, movementdirection), 0.1 SECONDS)
-	else
-		user.newtonian_move(REVERSE_DIR(direction))
+		playsound(src.loc, 'sound/effects/extinguish.ogg', 75, TRUE, -3)
 
-	//Get all the turfs that can be shot at
-	var/turf/T = get_turf(interacting_with)
-	var/turf/T1 = get_step(T,turn(direction, 90))
-	var/turf/T2 = get_step(T,turn(direction, -90))
-	var/list/the_targets = list(T,T1,T2)
-	if(precision)
-		var/turf/T3 = get_step(T1, turn(direction, 90))
-		var/turf/T4 = get_step(T2,turn(direction, -90))
-		the_targets.Add(T3,T4)
+		var/direction = get_dir(src,target)
 
-	var/list/water_particles = list()
-	for(var/a in 1 to 5)
-		var/obj/effect/particle_effect/water/extinguisher/water = new /obj/effect/particle_effect/water/extinguisher(get_turf(src))
-		var/my_target = pick(the_targets)
-		water_particles[water] = my_target
-		// If precise, remove turf from targets so it won't be picked more than once
+		if(user.buckled && isobj(user.buckled) && !user.buckled.anchored)
+			var/obj/B = user.buckled
+			var/movementdirection = REVERSE_DIR(direction)
+			addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/item/extinguisher, move_chair), B, movementdirection), 0.1 SECONDS)
+		else
+			user.newtonian_move(REVERSE_DIR(direction))
+
+		//Get all the turfs that can be shot at
+		var/turf/T = get_turf(target)
+		var/turf/T1 = get_step(T,turn(direction, 90))
+		var/turf/T2 = get_step(T,turn(direction, -90))
+		var/list/the_targets = list(T,T1,T2)
 		if(precision)
-			the_targets -= my_target
-		var/datum/reagents/water_reagents = new /datum/reagents(5)
-		water.reagents = water_reagents
-		water_reagents.my_atom = water
-		reagents.trans_to(water, 1, transferred_by = user)
+			var/turf/T3 = get_step(T1, turn(direction, 90))
+			var/turf/T4 = get_step(T2,turn(direction, -90))
+			the_targets.Add(T3,T4)
 
-	//Make em move dat ass, hun
-	move_particles(water_particles)
-	return ITEM_INTERACT_SKIP_TO_ATTACK // You can smack while spraying
+		var/list/water_particles = list()
+		for(var/a in 1 to 5)
+			var/obj/effect/particle_effect/water/extinguisher/water = new /obj/effect/particle_effect/water/extinguisher(get_turf(src))
+			var/my_target = pick(the_targets)
+			water_particles[water] = my_target
+			// If precise, remove turf from targets so it won't be picked more than once
+			if(precision)
+				the_targets -= my_target
+			var/datum/reagents/water_reagents = new /datum/reagents(5)
+			water.reagents = water_reagents
+			water_reagents.my_atom = water
+			reagents.trans_to(water, 1, transferred_by = user)
+
+		//Make em move dat ass, hun
+		move_particles(water_particles)
+
+	return .
 
 //Particle movement loop
 /obj/item/extinguisher/proc/move_particles(list/particles)
@@ -316,8 +307,5 @@
 	name = "fire extender"
 	desc = "A traditional red fire extinguisher. Made in Britain... wait, what?"
 	chem = /datum/reagent/fuel
-	tanktypes = list(
-		/obj/structure/reagent_dispensers/fueltank,
-		/obj/structure/reagent_dispensers/plumbed
-	)
+	tanktype = /obj/structure/reagent_dispensers/fueltank
 	cooling_power = 0

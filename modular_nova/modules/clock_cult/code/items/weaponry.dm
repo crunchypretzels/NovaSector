@@ -168,10 +168,11 @@
 	AddElement(/datum/element/clockwork_description, "Firing from brass tiles will halve the time that it takes to recharge a bolt.")
 	AddElement(/datum/element/clockwork_pickup)
 
-/obj/item/gun/ballistic/bow/clockwork/try_fire_gun(atom/target, mob/living/user, params)
+/obj/item/gun/ballistic/bow/clockwork/afterattack(atom/target, mob/living/user, flag, params, passthrough)
 	if(!drawn || !chambered)
 		to_chat(user, span_notice("[src] must be drawn to fire a shot!"))
-		return FALSE
+		return
+
 	return ..()
 
 /obj/item/gun/ballistic/bow/clockwork/shoot_live_shot(mob/living/user, pointblank, atom/pbtarget, message)

@@ -68,12 +68,6 @@
 	path = /obj/item/bodypart/arm/left/plasmaman
 	uses_robotic_styles = FALSE
 
-/datum/augment_item/limb/l_arm/peg
-	name = "Left peg arm"
-	path = /obj/item/bodypart/arm/left/ghetto
-	cost = -2
-	uses_robotic_styles = FALSE
-
 /datum/augment_item/limb/l_arm/self_destruct
 	name = "No Left Arm"
 	path = /obj/item/bodypart/arm/left/self_destruct
@@ -96,12 +90,6 @@
 /datum/augment_item/limb/r_arm/plasmaman
 	name = "Plasmaman right arm"
 	path = /obj/item/bodypart/arm/right/plasmaman
-	uses_robotic_styles = FALSE
-
-/datum/augment_item/limb/r_arm/peg
-	name = "Right peg arm"
-	path = /obj/item/bodypart/arm/right/ghetto
-	cost = -2
 	uses_robotic_styles = FALSE
 
 /datum/augment_item/limb/r_arm/self_destruct
@@ -128,11 +116,6 @@
 	path = /obj/item/bodypart/leg/left/plasmaman
 	uses_robotic_styles = FALSE
 
-/datum/augment_item/limb/l_leg/peg
-	name = "Left peg leg"
-	path = /obj/item/bodypart/leg/left/ghetto
-	cost = -2
-
 /datum/augment_item/limb/l_leg/self_destruct
 	name = "No Left Leg"
 	path = /obj/item/bodypart/leg/left/self_destruct
@@ -156,11 +139,6 @@
 	name = "Plasmaman right leg"
 	path = /obj/item/bodypart/leg/right/plasmaman
 	uses_robotic_styles = FALSE
-
-/datum/augment_item/limb/r_leg/peg
-	name = "Right peg leg"
-	path = /obj/item/bodypart/leg/right/ghetto
-	cost = -2
 
 /datum/augment_item/limb/r_leg/self_destruct
 	name = "No Right Leg"

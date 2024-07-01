@@ -20,8 +20,13 @@
 	if(SEND_SIGNAL(target, COMSIG_CLICK_CTRL, src) & CLICK_ACTION_ANY)
 		return TRUE
 
-	// This means the action has been processed even though nothing happened
-	if(!can_perform_action(target, target.interaction_flags_click | SILENT_ADJACENCY))
+	var/can_use_click_action = FALSE
+	if(isturf(target))
+		// Turfs are special because they can't be used with can_perform_action
+		can_use_click_action = can_perform_turf_action(target)
+	else
+		can_use_click_action = can_perform_action(target, target.interaction_flags_click | SILENT_ADJACENCY)
+	if(!can_use_click_action)
 		return TRUE
 
 	// If it has a custom click_alt that returns success/block, done.
@@ -94,9 +99,17 @@
 	if(SEND_SIGNAL(target, COMSIG_CLICK_CTRL_SHIFT, src) & CLICK_ACTION_ANY)
 		return
 
+	var/can_use_click_action = FALSE
+	if(isturf(target))
+		// Turfs are special because they can't be used with can_perform_action
+		can_use_click_action = can_perform_turf_action(target)
+	else
+		can_use_click_action = can_perform_action(target, target.interaction_flags_click | SILENT_ADJACENCY)
+	if(!can_use_click_action)
+		return
+
 	// Proceed with ctrl shift click
-	if(can_perform_action(target, target.interaction_flags_click | SILENT_ADJACENCY))
-		target.click_ctrl_shift(src)
+	target.click_ctrl_shift(src)
 
 /**
  * ## Custom ctrl shift click interaction

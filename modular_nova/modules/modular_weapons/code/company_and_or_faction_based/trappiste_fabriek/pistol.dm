@@ -83,7 +83,7 @@
 
 	fire_delay = 1 SECONDS
 
-	recoil = 2
+	recoil = 3
 
 /obj/item/gun/ballistic/automatic/pistol/trappiste/give_manufacturer_examine()
 	AddElement(/datum/element/manufacturer_examine, COMPANY_TRAPPISTE)

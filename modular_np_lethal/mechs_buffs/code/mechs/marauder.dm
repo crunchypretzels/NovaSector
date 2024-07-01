@@ -37,16 +37,14 @@
 //Seraph, evil marauder. better in every way, it's probably the most dangerous of all the big dumb evil mechs. All evil mechs are for admin events/big boss fights.
 // It's similar to a durand in it's durability but can walk around the speed of a gygax. Be afraid.
 
-//Nvm now it's a filtre mech, fast as a marauder, cant take injurys and has the health of a durand
-
 /obj/vehicle/sealed/mecha/marauder/seraph
 	armor_type = /datum/armor/mecha_seraph
-	movedelay = 4
-	internal_damage_threshold = 0
+	movedelay = 3
+	internal_damage_threshold = 25
 	internal_damage_probability = 10
 	max_integrity = 1000
 	wreckage = /obj/structure/mecha_wreckage/seraph
-	force = 40
+	force = 35
 	max_equip_by_category = list(
 		MECHA_L_ARM = 1,
 		MECHA_R_ARM = 1,

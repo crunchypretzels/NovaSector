@@ -32,9 +32,6 @@
 	var/suppress_reactions = FALSE
 	/// Is there a hypernoblium crystal inserted into this
 	var/nob_crystal_inserted = FALSE
-	var/insert_sound = 'sound/effects/tank_insert_clunky.ogg'
-	var/remove_sound = 'sound/effects/tank_remove_thunk.ogg'
-	var/sound_vol = 50
 
 /datum/armor/machinery_portable_atmospherics
 	energy = 100
@@ -214,23 +211,15 @@
 /obj/machinery/portable_atmospherics/proc/replace_tank(mob/living/user, close_valve, obj/item/tank/new_tank)
 	if(!user)
 		return FALSE
-	if(holding && new_tank)//for when we are actually switching tanks
-		user.put_in_hands(holding)
-		UnregisterSignal(holding, COMSIG_QDELETING)
-		holding = new_tank
-		RegisterSignal(holding, COMSIG_QDELETING, PROC_REF(unregister_holding))
-		playsound(src, list(insert_sound,remove_sound), sound_vol)
-	else if(holding)//we remove a tank
+	if(holding)
 		if(Adjacent(user))
 			user.put_in_hands(holding)
 		else
 			holding.forceMove(get_turf(src))
-		playsound(src, remove_sound, sound_vol)
 		UnregisterSignal(holding, COMSIG_QDELETING)
 		holding = null
-	else if(new_tank)//we insert the tank
+	if(new_tank)
 		holding = new_tank
-		playsound(src, insert_sound, sound_vol)
 		RegisterSignal(holding, COMSIG_QDELETING, PROC_REF(unregister_holding))
 
 	SSair.start_processing_machine(src)

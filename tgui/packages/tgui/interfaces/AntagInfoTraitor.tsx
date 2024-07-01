@@ -49,14 +49,15 @@ const IntroductionSection = (props) => {
         <Stack.Item fontSize="25px">{intro}</Stack.Item>
         <Stack.Item grow>
           <ObjectivePrintout objectives={objectives} />
-          {/* NOVA EDIT ADDITION START */}
-          <Stack.Item grow>
-            <Stack.Item>
-              <Rules />
-            </Stack.Item>
-          </Stack.Item>
-          {/* NOVA EDIT ADDITION END */}
         </Stack.Item>
+        {/* NOVA EDIT ADDITION START */}
+        <Stack.Item grow>
+          {/* NOVA EDIT ADDITION START */}
+          <Stack.Item>
+            <Rules />
+          </Stack.Item>
+        </Stack.Item>
+        {/* NOVA EDIT ADDITION END */}
       </Stack>
     </Section>
   );

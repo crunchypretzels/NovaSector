@@ -213,7 +213,7 @@
 
 
 /obj/projectile/bullet/incendiary/fire/backblast/short_range
-	range = 1
+	range = 2
 
 
 // .980 tear gas grenade

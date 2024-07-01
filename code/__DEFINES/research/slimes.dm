@@ -11,15 +11,15 @@
 #define SLIME_MAX_POWER 10
 
 ///The maximum amount of nutrition a slime can contain
-#define SLIME_MAX_NUTRITION 200
+#define SLIME_MAX_NUTRITION 1000
 ///The starting nutrition of a slime
-#define SLIME_STARTING_NUTRITION 100
+#define SLIME_STARTING_NUTRITION 700
 /// Above it we grow our amount_grown and our power_level, below it we can eat
-#define SLIME_GROW_NUTRITION 150
+#define SLIME_GROW_NUTRITION 800
 /// Below this, we feel hungry
-#define SLIME_HUNGER_NUTRITION 50
+#define SLIME_HUNGER_NUTRITION 500
 /// Below this, we feel starving
-#define SLIME_STARVE_NUTRITION 10
+#define SLIME_STARVE_NUTRITION 200
 
 ///The slime is not hungry. It might try to feed anyways.
 #define SLIME_HUNGER_NONE 0
@@ -61,6 +61,3 @@
 #define SLIME_TYPE_SEPIA "sepia"
 #define SLIME_TYPE_SILVER "silver"
 #define SLIME_TYPE_YELLOW "yellow"
-
-// The alpha value of transperent slime types
-#define SLIME_TRANSPARENCY_ALPHA 180

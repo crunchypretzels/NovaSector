@@ -95,7 +95,7 @@
 		context[SCREENTIP_CONTEXT_LMB] = "Combine cards"
 		return CONTEXTUAL_SCREENTIP_SET
 
-	if(IS_WRITING_UTENSIL(held_item))
+	if(istype(held_item, /obj/item/toy/crayon) || istype(held_item, /obj/item/pen))
 		context[SCREENTIP_CONTEXT_LMB] = blank ? "Write on card" : "Mark card"
 		return CONTEXTUAL_SCREENTIP_SET
 

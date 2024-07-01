@@ -49,19 +49,7 @@
 
 /datum/loadout_item/head/honorgaurd_armor
 	name = "'Kharuul' type IV ballistic helmet'"
-	item_path = /obj/item/clothing/head/helmet/lethal_filtre_helmet/light/honorguard
+	item_path = /obj/item/clothing/head/helmet/lethal_filtre_helmet/honorguard
 	ckeywhitelist = list("Luckydente")
 	restricted_roles = list("Filtre")
 
-/datum/loadout_item/head/runner
-	name = "Runner-Class Awareness Suite"
-	item_path = /obj/item/clothing/head/helmet/lethal_filtre_helmet/light/runner
-	ckeywhitelist = list("CandleJax")
-	restricted_roles = list("Filtre")
-
-// Custom pinata helmets
-
-/datum/loadout_item/head/candle
-	name = "'Yamakari-Lain' wetware interface"
-	item_path = /obj/item/clothing/head/helmet/lethal_pinata_helmet/candle
-	ckeywhitelist = list("CandleJax")

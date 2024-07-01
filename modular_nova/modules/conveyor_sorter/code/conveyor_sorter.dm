@@ -35,20 +35,23 @@
 	new_cs.sorting_list = current_sort
 	spawned_sorters += new_cs
 
-/obj/item/conveyor_sorter/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
-	if(!ismovable(interacting_with))
-		return NONE
-	if(istype(interacting_with, /obj/effect/decal/conveyor_sorter))
-		return NONE
-	if(is_type_in_list(interacting_with, current_sort))
-		to_chat(user, span_warning("[interacting_with] is already in [src]'s sorting list!"))
-		return ITEM_INTERACT_BLOCKING
+/obj/item/conveyor_sorter/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	if(target == src)
+		return ..()
+	if(!proximity_flag)
+		return ..()
+	if(!ismovable(target))
+		return ..()
+	if(istype(target, /obj/effect/decal/conveyor_sorter))
+		return
+	if(is_type_in_list(target, current_sort))
+		to_chat(user, span_warning("[target] is already in [src]'s sorting list!"))
+		return
 	if(length(current_sort) >= max_items)
 		to_chat(user, span_warning("[src] already has [max_items] things within the sorting list!"))
-		return ITEM_INTERACT_BLOCKING
-	current_sort += interacting_with.type
-	to_chat(user, span_notice("[interacting_with] has been added to [src]'s sorting list."))
-	return ITEM_INTERACT_SUCCESS
+		return
+	current_sort += target.type
+	to_chat(user, span_notice("[target] has been added to [src]'s sorting list."))
 
 /obj/item/conveyor_sorter/click_alt(mob/user)
 	visible_message("[src] pings, resetting its sorting list!")
@@ -157,11 +160,11 @@
 	id = "conveyorsorter"
 	display_name = "Conveyor Sorter"
 	description = "Finally, the ability to automatically sort stuff."
-	prereq_ids = list("bluespace_theory")
+	prereq_ids = list("bluespace_basic", "engineering")
 	design_ids = list(
 		"conveysorter",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
 /obj/item/conveyor_sorter/improved
 	name = "improved conveyor sorter lister"
@@ -197,8 +200,8 @@
 	id = "conveyor_sorter_improved"
 	display_name = "Improved Conveyor Sorter"
 	description = "An improved version of the conveyor sorter, this one allows for more control over sorting."
-	prereq_ids = list("applied_bluespace")
+	prereq_ids = list("practical_bluespace", "conveyorsorter")
 	design_ids = list(
 		"conveyor_sorter_improved",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 7500) // Why.

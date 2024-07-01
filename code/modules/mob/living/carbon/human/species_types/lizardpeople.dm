@@ -8,8 +8,7 @@
 		TRAIT_TACKLING_TAILED_DEFENDER,
 	)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_REPTILE
-	mutant_bodyparts = list("body_markings" = "None", "legs" = "Normal Legs") // NOVA EDIT CHANGE - ORIGINAL: mutant_bodyparts = list("legs" = "Normal Legs")
-	//body_markings = list(/datum/bodypart_overlay/simple/body_marking/lizard = "None") // NOVA EDIT REMOVAL - We do this our own way
+	mutant_bodyparts = list("body_markings" = "None", "legs" = "Normal Legs")
 	external_organs = list(
 		/obj/item/organ/external/horns = "None",
 		/obj/item/organ/external/frills = "None",
@@ -52,7 +51,7 @@
 /*
 /datum/species/lizard/randomize_features()
 	var/list/features = ..()
-	features["lizard_markings"] = pick(SSaccessories.lizard_markings_list)
+	features["body_markings"] = pick(GLOB.body_markings_list)
 	return features
 */
 //NOVA EDIT REMOVAL END
@@ -161,6 +160,7 @@ Lizard subspecies: ASHWALKERS
 	inherent_traits = list(
 		TRAIT_MUTANT_COLORS,
 		TRAIT_VIRUSIMMUNE,
+		TRAIT_FORBID_MINING_SHUTTLE_CONSOLE_OUTSIDE_STATION,
 	)
 	species_language_holder = /datum/language_holder/lizard/ash
 	digitigrade_customization = DIGITIGRADE_FORCED

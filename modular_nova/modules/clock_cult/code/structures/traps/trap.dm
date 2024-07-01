@@ -18,12 +18,12 @@
 
 	place_trap(get_turf(src), user)
 
-/obj/item/clockwork/trap_placer/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
-	if(!IS_CLOCK(user) || !isturf(interacting_with))
-		return NONE
+/obj/item/clockwork/trap_placer/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	. = ..()
+	if(!IS_CLOCK(user) || !isturf(target) || !proximity_flag)
+		return
 
-	place_trap(interacting_with, user)
-	return ITEM_INTERACT_SUCCESS
+	place_trap(target, user)
 
 
 /obj/item/clockwork/trap_placer/proc/place_trap(atom/target, mob/user)

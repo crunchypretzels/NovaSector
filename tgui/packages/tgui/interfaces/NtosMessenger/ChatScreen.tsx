@@ -1,4 +1,5 @@
 import { BooleanLike } from 'common/react';
+import { decodeHtmlEntities } from 'common/string';
 import { Component, createRef, RefObject } from 'react';
 
 import { useBackend } from '../../backend';
@@ -436,9 +437,7 @@ const ChatMessage = (props: ChatMessageProps) => {
   } = props;
   // NOVA EDIT CHANGE END
 
-  const messageHTML = {
-    __html: `${message}`,
-  };
+  const displayMessage = decodeHtmlEntities(message);
 
   return (
     // NOVA EDIT CHANGE START - ORIGINAL: <Box className={`NtosChatMessage${outgoing ? '_outgoing' : ''}`}>
@@ -455,7 +454,7 @@ const ChatMessage = (props: ChatMessageProps) => {
     >
       {/* NOVA EDIT CHANGE END */}
       <Box className="NtosChatMessage__content">
-        <Box as="span" dangerouslySetInnerHTML={messageHTML} />
+        <Box as="span">{displayMessage}</Box>
         <Tooltip content={timestamp} position={outgoing ? 'left' : 'right'}>
           <Icon
             className="NtosChatMessage__timestamp"

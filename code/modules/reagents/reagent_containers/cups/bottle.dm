@@ -510,7 +510,7 @@
 		balloon_alert(user, "transferred [transfer_amount] unit\s")
 		flick("syrup_anim",src)
 
-	if(IS_WRITING_UTENSIL(attacking_item))
+	if(istype(attacking_item, /obj/item/pen))
 		rename(user, attacking_item)
 
 	attacking_item.update_appearance()

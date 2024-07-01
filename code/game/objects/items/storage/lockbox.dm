@@ -23,12 +23,12 @@
 
 	register_context()
 
-/obj/item/storage/lockbox/storage_insert_on_interacted_with(datum/storage, obj/item/inserted, mob/living/user)
+/obj/item/storage/lockbox/attackby(obj/item/W, mob/user, params)
 	var/locked = atom_storage.locked
-	if(inserted.GetID())
+	if(W.GetID())
 		if(broken)
 			balloon_alert(user, "broken!")
-			return FALSE
+			return
 		if(allowed(user))
 			if(atom_storage.locked)
 				atom_storage.locked = STORAGE_NOT_LOCKED
@@ -42,16 +42,15 @@
 				icon_state = icon_closed
 
 			balloon_alert(user, locked ? "locked" : "unlocked")
-			return FALSE
+			return
 
-		balloon_alert(user, "access denied!")
-		return FALSE
-
-	if(locked)
+		else
+			balloon_alert(user, "access denied!")
+			return
+	if(!locked)
+		return ..()
+	else
 		balloon_alert(user, "locked!")
-		return FALSE
-
-	return TRUE
 
 /obj/item/storage/lockbox/emag_act(mob/user, obj/item/card/emag/emag_card)
 	if(!broken)
@@ -99,6 +98,7 @@
 /obj/item/storage/lockbox/medal
 	name = "medal box"
 	desc = "A locked box used to store medals of honor."
+	icon = 'icons/obj/storage/case.dmi'
 	icon_state = "medalbox+l"
 	inhand_icon_state = "syringe_kit"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
@@ -235,6 +235,7 @@
 /obj/item/storage/lockbox/order
 	name = "order lockbox"
 	desc = "A box used to secure small cargo orders from being looted by those who didn't order it. Yeah, cargo tech, that means you."
+	icon = 'icons/obj/storage/case.dmi'
 	icon_state = "secure"
 	icon_closed = "secure"
 	icon_locked = "secure_locked"
@@ -251,20 +252,24 @@
 	buyer_account = _buyer_account
 	ADD_TRAIT(src, TRAIT_NO_MISSING_ITEM_ERROR, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NO_MANIFEST_CONTENTS_ERROR, TRAIT_GENERIC)
-	//NOVA EDIT ADDITION START
+
+	//NOVA EDIT START
 	if(istype(buyer_account, /datum/bank_account/department))
 		department_purchase = TRUE
 		department_account = buyer_account
-	//NOVA EDIT ADDITION END
+	//NOVA EDIT END
 
-/obj/item/storage/lockbox/order/storage_insert_on_interacted_with(datum/storage, obj/item/inserted, mob/living/user)
-	var/obj/item/card/id/id_card = inserted.GetID()
+/obj/item/storage/lockbox/order/attackby(obj/item/W, mob/user, params)
+	var/obj/item/card/id/id_card = W.GetID()
 	if(!id_card)
 		return ..()
 
-	if((id_card.registered_account != buyer_account) && !(department_purchase && (id_card.registered_account?.account_job?.paycheck_department) == (department_account.department_id))) //NOVA EDIT CHANGE - ORIGINAL: if(id_card.registered_account != buyer_account)
+	if(iscarbon(user))
+		add_fingerprint(user)
+
+	if((id_card.registered_account != buyer_account) && !(department_purchase && (id_card.registered_account?.account_job?.paycheck_department) == (department_account.department_id))) //NOVA EDIT
 		balloon_alert(user, "incorrect bank account!")
-		return FALSE
+		return
 
 	if(privacy_lock)
 		atom_storage.locked = STORAGE_NOT_LOCKED
@@ -273,11 +278,8 @@
 		atom_storage.locked = STORAGE_FULLY_LOCKED
 		icon_state = icon_closed
 	privacy_lock = atom_storage.locked
-	user.visible_message(
-		span_notice("[user] [privacy_lock ? "" : "un"]locks [src]'s privacy lock."),
-		span_notice("You [privacy_lock ? "" : "un"]lock [src]'s privacy lock."),
-	)
-	return FALSE
+	user.visible_message(span_notice("[user] [privacy_lock ? "" : "un"]locks [src]'s privacy lock."),
+					span_notice("You [privacy_lock ? "" : "un"]lock [src]'s privacy lock."))
 
 ///screentips for lockboxes
 /obj/item/storage/lockbox/add_context(atom/source, list/context, obj/item/held_item, mob/user)
