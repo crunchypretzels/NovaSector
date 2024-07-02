@@ -8504,6 +8504,7 @@
 #include "modular_np_lethal\lethalcosmetics\code\kitty_hoodie.dm"
 #include "modular_np_lethal\lethalcosmetics\code\loadout_stuff.dm"
 #include "modular_np_lethal\lethalcosmetics\code\slot_overrides.dm"
+#include "modular_np_lethal\lethal_GAGS\greyscale_configs.dm"
 #include "modular_np_lethal\lethalguns\code\bullets.dm"
 #include "modular_np_lethal\lethalguns\code\giant_weapon_buff_real.dm"
 #include "modular_np_lethal\lethalguns\code\grenades.dm"

@@ -144,8 +144,9 @@
 	drop_sound = 'sound/items/handling/cardboardbox_drop.ogg'
 	pickup_sound = 'sound/items/handling/cardboardbox_pickup.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
-	custom_materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT*3, \ // for the. container?
-							/datum/material/plasma = SMALL_MATERIAL_AMOUNT*5) // the part that explodes
+	custom_materials = list(
+		/datum/material/plastic = SHEET_MATERIAL_AMOUNT * 3, // for the. container?
+		/datum/material/plasma = SMALL_MATERIAL_AMOUNT * 5) // the part that explodes
 
 /obj/item/epic_loot/plasma_explosive/Initialize(mapload)
 	. = ..()
