@@ -204,10 +204,12 @@
 	w_class = WEIGHT_CLASS_BULKY
 	drop_sound = 'sound/items/handling/ammobox_drop.ogg'
 	pickup_sound = 'sound/items/handling/ammobox_pickup.ogg'
-	custom_materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT*3, \
-						/datum/material/titanium = SHEET_MATERIAL_AMOUNT * 5, \ // titanium housing
-						/datum/material/silver = SHEET_MATERIAL_AMOUNT*4, \
-						/datum/material/gold = SHEET_MATERIAL_AMOUNT*4,)
+	custom_materials = list(
+		/datum/material/plastic = SHEET_MATERIAL_AMOUNT * 3,
+		/datum/material/titanium = SHEET_MATERIAL_AMOUNT * 5,
+		/datum/material/silver = SHEET_MATERIAL_AMOUNT * 4,
+		/datum/material/gold = SHEET_MATERIAL_AMOUNT * 4
+		)
 
 /obj/item/epic_loot/shuttle_gyro/Initialize(mapload)
 	. = ..()

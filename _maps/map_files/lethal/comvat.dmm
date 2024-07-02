@@ -10,6 +10,12 @@
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/iron/freezer,
 /area/gakster_location/war)
+"ae" = (
+/obj/structure/deepmaints_entrance/ninja,
+/obj/structure/deepmaints_entrance/ninja,
+/obj/machinery/light/cold/dim/directional/west,
+/turf/open/floor/bamboo/tatami/black,
+/area/gakster_location/ninja_hideout)
 "ag" = (
 /obj/effect/turf_decal/delivery/red,
 /turf/open/indestructible/dark/smooth_large,
@@ -446,6 +452,11 @@
 "cq" = (
 /obj/structure/bed,
 /obj/structure/curtain/bounty,
+/turf/open/floor/iron/dark/smooth_large,
+/area/gakster_location/war)
+"cr" = (
+/obj/structure/table,
+/obj/item/lethalcash/c1,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
 "cs" = (
@@ -941,6 +952,9 @@
 	},
 /turf/closed/indestructible/fakedoor/engineering,
 /area/gakster_location/inborn_spawn)
+"fm" = (
+/turf/open/floor/bamboo/tatami/black,
+/area/gakster_location/ninja_hideout)
 "fn" = (
 /obj/structure/fluff/metalpole{
 	dir = 8
@@ -1113,6 +1127,10 @@
 /obj/machinery/light/warm/dim/directional/east,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
+"gr" = (
+/obj/machinery/iv_drip/health_station/directional/south,
+/turf/open/floor/bamboo/tatami/black,
+/area/gakster_location/ninja_hideout)
 "gt" = (
 /obj/effect/decal/cleanable/robot_debris/old,
 /turf/open/floor/iron/smooth,
@@ -2747,6 +2765,10 @@
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
+"ph" = (
+/obj/machinery/iv_drip/health_station/directional/north,
+/turf/open/floor/bamboo/tatami/black,
+/area/gakster_location/ninja_hideout)
 "pi" = (
 /obj/structure/decorative/shelf/crates,
 /turf/open/floor/iron/dark/smooth_large,
@@ -3461,9 +3483,9 @@
 /turf/open/openspace,
 /area/gakster_location/outside)
 "tg" = (
-/obj/item/stack/sheet/cardboard,
-/turf/open/indestructible/plating,
-/area/gakster_location/hideout_real)
+/obj/machinery/cryopod/prison/directional/north,
+/turf/open/floor/bamboo/tatami/black,
+/area/gakster_location/ninja_hideout)
 "th" = (
 /obj/structure/sign/poster/official/help_others/directional/south,
 /turf/open/floor/iron/smooth,
@@ -4239,6 +4261,10 @@
 /obj/machinery/light/floor,
 /turf/open/floor/plating,
 /area/gakster_location/war)
+"xf" = (
+/obj/machinery/light/cold/dim/directional/north,
+/turf/open/floor/bamboo/tatami/black,
+/area/gakster_location/ninja_hideout)
 "xi" = (
 /obj/structure/window/green_glass_pane,
 /obj/effect/mapping_helpers/damaged_window,
@@ -4324,6 +4350,11 @@
 /obj/structure/table,
 /obj/effect/spawner/random/epic_loot/random_provisions,
 /turf/open/floor/iron/dark/smooth_large,
+/area/gakster_location/war)
+"xJ" = (
+/obj/machinery/light/red/dim/directional/north,
+/obj/item/lethalcash/c1,
+/turf/open/floor/catwalk_floor/iron_smooth,
 /area/gakster_location/war)
 "xL" = (
 /obj/structure/railing/wooden_fencing,
@@ -4436,6 +4467,10 @@
 /obj/effect/spawner/random/epic_loot/random_provisions,
 /obj/effect/spawner/random/epic_loot/random_provisions,
 /turf/open/floor/iron/dark/smooth_large,
+/area/gakster_location/war)
+"ym" = (
+/obj/item/lethalcash/c1,
+/turf/open/floor/iron/smooth,
 /area/gakster_location/war)
 "yo" = (
 /obj/structure/railing/wooden_fencing{
@@ -4755,6 +4790,9 @@
 "zZ" = (
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/gakster_location/filtre_spawn)
+"Ab" = (
+/turf/open/floor/mineral/titanium/tiled/white,
+/area/gakster_location/ninja_hideout)
 "Ae" = (
 /obj/machinery/vending/wallmed/epic_loot/directional/north,
 /turf/open/floor/plating,
@@ -4877,6 +4915,12 @@
 	},
 /turf/open/indestructible/plating,
 /area/gakster_location/hideout_real)
+"AE" = (
+/obj/structure/closet/wardrobe,
+/obj/item/storage/medkit/frontier/stocked,
+/obj/item/storage/medkit/robotic_repair/stocked,
+/turf/open/floor/bamboo/tatami/black,
+/area/gakster_location/ninja_hideout)
 "AF" = (
 /obj/structure/table,
 /obj/structure/maintenance_loot_structure/toolbox/random,
@@ -4927,6 +4971,11 @@
 /obj/machinery/light/dim/directional/east,
 /turf/open/openspace,
 /area/gakster_location/hideout_real)
+"Bb" = (
+/obj/machinery/shower/directional/west,
+/obj/structure/drain,
+/turf/open/floor/mineral/titanium/tiled/white,
+/area/gakster_location/ninja_hideout)
 "Bd" = (
 /obj/machinery/light/cold/dim/directional/south,
 /turf/open/indestructible/hoteltile,
@@ -5166,6 +5215,11 @@
 /obj/effect/turf_decal/bot_red,
 /turf/open/indestructible/dark/smooth_large,
 /area/gakster_location/hideout_real)
+"Cn" = (
+/obj/structure/table/wood,
+/obj/item/food/grown/poppy/geranium/fraxinella,
+/turf/open/floor/bamboo/tatami/black,
+/area/gakster_location/ninja_hideout)
 "Co" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/spawner/random/epic_loot/mech_ammo,
@@ -5265,6 +5319,11 @@
 /obj/effect/spawner/random/trash/food_packaging,
 /turf/open/misc/asteroid/snow/standard_air,
 /area/gakster_location/inborn_spawn)
+"CL" = (
+/obj/machinery/light/red/dim/directional/west,
+/obj/item/lethalcash/c1,
+/turf/open/floor/iron/smooth,
+/area/gakster_location/war)
 "CO" = (
 /obj/machinery/light/cold/dim/directional/east,
 /turf/open/floor/iron/smooth,
@@ -5550,6 +5609,10 @@
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
+"Eg" = (
+/obj/structure/mineral_door/manual_colony_door,
+/turf/open/floor/mineral/titanium/tiled/white,
+/area/gakster_location/ninja_hideout)
 "Eh" = (
 /obj/item/toy/basketball,
 /obj/item/toy/basketball{
@@ -6099,6 +6162,9 @@
 /obj/effect/spawner/random/epic_loot/random_silly_arms,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
+"Hs" = (
+/turf/closed/indestructible/opshuttle,
+/area/gakster_location/ninja_hideout)
 "Hv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/weightmachine/weightlifter,
@@ -6152,6 +6218,11 @@
 /obj/effect/spawner/random/epic_loot/medical_tools,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
+"HJ" = (
+/obj/structure/table/wood,
+/obj/item/food/grown/poppy/geranium,
+/turf/open/floor/bamboo/tatami/black,
+/area/gakster_location/ninja_hideout)
 "HK" = (
 /mob/living/basic/trooper/gakster/melee/filtre,
 /turf/open/floor/wood/tile,
@@ -6447,8 +6518,14 @@
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
 	},
+/obj/structure/deepmaints_entrance/inborn,
 /turf/open/misc/asteroid/snow/standard_air,
 /area/gakster_location/inborn_spawn)
+"Jn" = (
+/obj/structure/toilet,
+/obj/machinery/light/cold/dim/directional/north,
+/turf/open/floor/mineral/titanium/tiled/white,
+/area/gakster_location/ninja_hideout)
 "Jo" = (
 /obj/structure/marker_beacon/burgundy,
 /obj/effect/turf_decal/delivery/red,
@@ -6838,6 +6915,11 @@
 /obj/effect/spawner/random/trash/mess,
 /turf/open/indestructible/hoteltile,
 /area/gakster_location/hideout_real)
+"Lg" = (
+/obj/structure/bed/pod,
+/obj/effect/landmark/start/lethal_genin,
+/turf/open/floor/bamboo/tatami/black,
+/area/gakster_location/ninja_hideout)
 "Lh" = (
 /turf/open/floor/iron/smooth,
 /area/gakster_location/war)
@@ -6887,6 +6969,10 @@
 /obj/machinery/light/red/directional/east,
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/gakster_location/war)
+"Ly" = (
+/obj/machinery/light/cold/dim/directional/south,
+/turf/open/floor/bamboo/tatami/black,
+/area/gakster_location/ninja_hideout)
 "Lz" = (
 /obj/structure/sign/departments/evac,
 /turf/closed/wall,
@@ -7167,6 +7253,11 @@
 	},
 /turf/open/indestructible/stone,
 /area/gakster_location/hideout_real)
+"Nc" = (
+/obj/structure/table,
+/obj/item/lethalcash/c20,
+/turf/open/floor/iron/dark/smooth_large,
+/area/gakster_location/war)
 "Nd" = (
 /obj/machinery/light/red/dim/directional/east,
 /turf/open/openspace,
@@ -7279,6 +7370,13 @@
 	},
 /turf/open/indestructible/dark/smooth_large,
 /area/gakster_location/filtre_spawn)
+"Nz" = (
+/obj/machinery/vending/evil_clothing/evil_ninja,
+/obj/item/toy/figure/ninja{
+	pixel_y = 16
+	},
+/turf/open/floor/bamboo/tatami/black,
+/area/gakster_location/ninja_hideout)
 "NA" = (
 /obj/structure/chair/plastic,
 /obj/effect/decal/cleanable/dirt,
@@ -7505,11 +7603,19 @@
 /obj/item/trash/can/food/tuna,
 /turf/open/indestructible/dark/smooth_large,
 /area/gakster_location/hideout_real)
+"ON" = (
+/obj/machinery/vending/wallmed/epic_loot/evil/ninja,
+/turf/closed/indestructible/opshuttle,
+/area/gakster_location/ninja_hideout)
 "OQ" = (
 /obj/structure/table,
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/flashbang,
 /turf/open/floor/iron/dark/smooth_large,
 /area/gakster_location/war)
+"OR" = (
+/obj/structure/sink/directional/west,
+/turf/open/floor/mineral/titanium/tiled/white,
+/area/gakster_location/ninja_hideout)
 "OT" = (
 /obj/structure/rack/shelf,
 /obj/effect/spawner/random/epic_loot/random_computer_parts,
@@ -7543,6 +7649,10 @@
 	},
 /turf/open/openspace,
 /area/gakster_location/outside)
+"Pd" = (
+/obj/structure/mineral_door/paperframe,
+/turf/open/floor/bamboo/tatami/black,
+/area/gakster_location/ninja_hideout)
 "Pe" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/camera/directional/west,
@@ -9196,6 +9306,7 @@
 "Yc" = (
 /obj/structure/lattice/catwalk,
 /obj/effect/mob_spawn/corpse/human/gakstermob,
+/obj/item/lethalcash/c1000,
 /turf/open/openspace,
 /area/gakster_location/outside)
 "Yd" = (
@@ -42039,7 +42150,7 @@ Lh
 lq
 tq
 tq
-Lh
+ym
 Lh
 Lh
 NT
@@ -43036,7 +43147,7 @@ NT
 Lh
 NT
 iw
-hz
+cr
 iA
 NT
 NT
@@ -43641,7 +43752,7 @@ dK
 ep
 Lh
 FE
-hz
+Nc
 Ou
 Lh
 ep
@@ -47043,7 +47154,7 @@ dK
 VP
 dK
 dK
-VP
+CL
 dK
 dK
 ep
@@ -48506,7 +48617,7 @@ dK
 NT
 ep
 NT
-gg
+xJ
 NT
 dK
 NT
@@ -57497,13 +57608,13 @@ Vi
 Vi
 Vi
 Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
+Hs
+Hs
+Hs
+Hs
+Hs
+Hs
+Hs
 Vi
 Vi
 Vi
@@ -57599,13 +57710,13 @@ Vi
 Vi
 Vi
 Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
+Hs
+Hs
+fm
+ae
+fm
+Hs
+Hs
 Vi
 Vi
 Vi
@@ -57648,6 +57759,7 @@ Ea
 Ea
 Sv
 MD
+FN
 FN
 FN
 FN
@@ -57701,13 +57813,13 @@ Vi
 Vi
 Vi
 Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
+Hs
+Hs
+fm
+fm
+fm
+Hs
+Hs
 Vi
 Vi
 Vi
@@ -57803,13 +57915,13 @@ Vi
 Vi
 Vi
 Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
+Hs
+Hs
+fm
+fm
+fm
+Hs
+Hs
 Vi
 Vi
 Vi
@@ -57902,16 +58014,16 @@ Vi
 (75,1,5) = {"
 Vi
 Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
+Hs
+Hs
+Hs
+Hs
+ph
+fm
+fm
+fm
+gr
+Hs
 Vi
 Vi
 Vi
@@ -58004,16 +58116,16 @@ Vi
 (76,1,5) = {"
 Vi
 Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
+Hs
+Jn
+Ab
+Eg
+fm
+fm
+fm
+fm
+fm
+ON
 Vi
 Vi
 Vi
@@ -58106,16 +58218,16 @@ Vi
 (77,1,5) = {"
 Vi
 Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
+Hs
+Bb
+OR
+Hs
+tg
+fm
+Nz
+fm
+fm
+Hs
 Vi
 Vi
 Vi
@@ -58208,16 +58320,16 @@ Vi
 (78,1,5) = {"
 Vi
 Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
+Hs
+Hs
+Hs
+Hs
+Pd
+ON
+Hs
+ON
+Pd
+Hs
 Vi
 Vi
 Vi
@@ -58313,13 +58425,13 @@ Vi
 Vi
 Vi
 Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
+Hs
+xf
+AE
+Hs
+AE
+Ly
+Hs
 Vi
 Vi
 Vi
@@ -58415,13 +58527,13 @@ Vi
 Vi
 Vi
 Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
+Hs
+Lg
+Cn
+Hs
+HJ
+Lg
+Hs
 Vi
 Vi
 Vi
@@ -58517,13 +58629,13 @@ Vi
 Vi
 Vi
 Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
+Hs
+Hs
+Hs
+Hs
+Hs
+Hs
+Hs
 Vi
 Vi
 Vi
@@ -60144,6 +60256,8 @@ Ea
 Vi
 "}
 (97,1,5) = {"
+Vi
+Vi
 Vi
 Vi
 Vi
