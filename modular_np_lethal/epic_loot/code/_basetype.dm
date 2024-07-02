@@ -6,7 +6,7 @@
 	layer = BELOW_OBJ_LAYER
 	obj_flags = CAN_BE_HIT
 	pass_flags_self = LETPASSTHROW|LETPASSCLICKS
-	max_integrity = 100
+	max_integrity = 200
 
 	/// What storage datum we use
 	var/storage_datum_to_use = /datum/storage/maintenance_loot_structure
@@ -53,7 +53,7 @@
 
 /datum/storage/maintenance_loot_structure
 	max_slots = 9
-	max_specific_storage = WEIGHT_CLASS_BULKY
+	max_specific_storage = WEIGHT_CLASS_GIGANTIC
 	max_total_storage = WEIGHT_CLASS_BULKY * 6
 	numerical_stacking = FALSE
 	rustle_sound = FALSE
