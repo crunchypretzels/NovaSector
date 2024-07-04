@@ -68,7 +68,7 @@
 			M.Translate(rand(-6, 6), rand(-4, 8))
 			banknote.transform = Mx
 			src.add_overlay(banknote)
-	if(value = 1)
+	if(value == 1)
 		name = "1 credit coin"
 		desc = "A lonely credit coin. Won't you get her some friends?"
 	else
