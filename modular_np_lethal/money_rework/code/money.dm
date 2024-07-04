@@ -66,7 +66,7 @@
 			var/image/banknote = image('modular_np_lethal/money_rework/icons/lethalmoney.dmi', "lethalcash[i]")
 			var/matrix/M = matrix()
 			M.Translate(rand(-6, 6), rand(-4, 8))
-			banknote.transform = Mx
+			banknote.transform = M
 			src.add_overlay(banknote)
 	if(value == 1)
 		name = "1 credit coin"
